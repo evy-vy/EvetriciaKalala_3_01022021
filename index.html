@@ -15,9 +15,64 @@
   </head>
   <body>
     <!-- HEADER -->
+    <header>
+      <img class="header__logo" src="./css/images/logo/ohmyfood@2x.svg" alt="logo ohmyfood">
+  </header>
     <!-- MAIN -->
     <!-- section search -->
+    <section class="search">
+      <div class="search__container">
+        <form action="treatment.php" method="GET">
+            <div class="search-form">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              <input class="search-form__inputField"
+                  type="search"
+                  id="search"
+                  value="Paris, Belleville"
+              />
+            </div>
+        </form>
+        <div class="search-info">
+            <h2 class="search-info__heading">Réservez le menu qui vous convient</h2>
+            <p class="search-info__byline">Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
+            <a href="#">
+              <button class="colorful-btn" type="submit">Explorer nos restaurants</button>  
+            </a>
+        </div>
+      </div>
+    </section>
     <!-- section fonctionnement -->
+    <section class="fonctionnement">
+      <ul>
+          <li> 
+              <a href="#">
+                  <p>1</p>
+                  <button class="btn" type="submit">
+                      <i class="fas fa-mobile-alt">
+                      </i>
+                      <p>Nos restaurants</p> 
+                  </button>
+              </a>
+          </li>
+          <li> 
+              <a href="#">
+                  <p>2</p>
+                  <button class="btn" type="submit">
+                      <i class="fas fa-list"></i>
+                      <p>votre menu</p> 
+                  </button>  
+              </a>
+          </li>
+          <li> 
+              <a href="#">
+                  <p>3</p>
+                  <button class="btn" type="submit">
+                      <i class="fas fa-store"></i>                            <p>Dégustez au restaurant</p> 
+                  </button>  
+              </a>
+          </li>
+      </ul>
+    </section>
     <!-- section resto -->
     <!-- FOOTER -->
   </body>
