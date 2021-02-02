@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css"/>
-    <link rel="stylesheet" type="text/css" href="images/font/flaticon.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/font/flaticon.css"/>
     <script
       src="https://kit.fontawesome.com/f97e8f3daf.js"
       crossorigin="anonymous" >
@@ -17,63 +17,127 @@
     <!-- HEADER -->
     <header>
       <img class="header__logo" src="./css/images/logo/ohmyfood@2x.svg" alt="logo ohmyfood">
-  </header>
+    </header>
     <!-- MAIN -->
     <!-- section search -->
     <section class="search">
       <div class="search__container">
         <form action="treatment.php" method="GET">
-            <div class="search-form">
-              <i class="fa fa-map-marker" aria-hidden="true"></i>
-              <input class="search-form__inputField"
-                  type="search"
-                  id="search"
-                  value="Paris, Belleville"
-              />
-            </div>
+          <div class="search-form">
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            <input type="search" id="search" value="Paris, Belleville"/> 
+          </div>
         </form>
-        <div class="search-info">
-            <h2 class="search-info__heading">Réservez le menu qui vous convient</h2>
-            <p class="search-info__byline">Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
-            <a href="#">
-              <button class="colorful-btn" type="submit">Explorer nos restaurants</button>  
-            </a>
+        <h2 class="heading">Réservez le menu qui vous convient</h2>
+        <p class="search-info__byline">
+            Découvrez des restaurants d'exception, sélectionnés par nos soins
+        </p>
+        <div class="search-btn">
+          <a href="#">
+            <button class="colorful-btn" type="submit">Explorer nos restaurants</button>  
+          </a>
         </div>
       </div>
     </section>
     <!-- section fonctionnement -->
     <section class="fonctionnement">
-      <ul>
-          <li> 
-              <a href="#">
-                  <p>1</p>
-                  <button class="btn" type="submit">
-                      <i class="fas fa-mobile-alt">
-                      </i>
-                      <p>Nos restaurants</p> 
-                  </button>
-              </a>
-          </li>
-          <li> 
-              <a href="#">
-                  <p>2</p>
-                  <button class="btn" type="submit">
-                      <i class="fas fa-list"></i>
-                      <p>votre menu</p> 
-                  </button>  
-              </a>
-          </li>
-          <li> 
-              <a href="#">
-                  <p>3</p>
-                  <button class="btn" type="submit">
-                      <i class="fas fa-store"></i>                            <p>Dégustez au restaurant</p> 
-                  </button>  
-              </a>
-          </li>
+      <ul class="fontctionnement-list">
+        <li> 
+            <span>1</span>
+            <i class="fas fa-mobile-alt">Nos restaurants</i>
+        </li>
+        <li> 
+          <span>2</span>
+          <i class="fas fa-list">votre menu</i>
+        </li>
+        <li>
+          <span>3</span>
+          <i class="fas fa-store">Dégustez au restaurant</i>  
+        </li>
       </ul>
     </section>
     <!-- section resto -->
+    <section class="resto">
+      <h3 class="resto__heading">Restaurants</h3>
+      <div class="resto-cards">
+        <ul>
+          <li>
+            <a>
+              <img src="./css/images/restaurants/La_palette_du_gout.jpg" alt="focus sur un plat de poisson"/>
+              <span class="resto-cards__tag">Nouveau</span>    
+              <div class="resto-cards__overlay">
+                <h3>La palette du goût</h3>
+                <i class="flaticon-heart"></i> 
+                <p>Ménilmontant</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a>
+              <img src="./css/images/restaurants/la_note_enchantee.jpg" alt="focus sur un plat"/>
+              <span class="resto-cards__tag">Nouveau</span>
+              <div class="resto-cards__overlay">
+                  <h3>La note enchantée</h3>
+                  <i class="flaticon-heart"></i>
+                  <i class="flaticon-clicker"></i>
+                  <p>Charonne</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a>
+              <img src="./css/images/restaurants/a_la_française.jpg" alt="focus sur un plat d'oeufs pochés sur son lit d'épinards" />
+              <div class="resto-cards__overlay">
+                  <h3>À la française</h3>
+                  <i class="flaticon-heart"></i>
+                  <p>Cité Rouge</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a>
+              <img src="./css/images/restaurants/le_delice_des_sens.jpg" alt="focus sur un plat de poisson" />
+              <div class="resto-cards__overlay">
+                <h3>Le délice des sens</h3>
+                <i class="flaticon-heart"></i>
+                <p>Folie-Méricourt</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+     </div>
+    </section>
     <!-- FOOTER -->
+    <footer>
+      <div class="footer__container">
+        <h4 class="footer__heading">ohmyfood</h4>
+        <ul class="footer__list">
+          <li>
+            <a class="footer__list link">
+              <span class="fa">
+                <i class="fas fa-utensils" aria-hidden="true">
+                  <p class="footer__byline">Proposer un restaurant</p>
+                </i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a class="footer__list link">
+              <span class="fa">
+                <i class="fas fa-hands-helping" aria-hidden="true">
+                  <p class="footer__byline">Devenir partenaire</p>
+                </i> 
+              </span>
+            </a>
+          </li>
+          <li>
+            <a class="footer__list link">Mentions légales</a>
+          </li>
+          <li>
+            <a class="footer__mail link" href="mailto:contact@ohmyfood.com">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>
