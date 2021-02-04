@@ -15,32 +15,35 @@
   </head>
   <body>
     <!-- HEADER -->
-    <header>
-      <img class="header__logo" src="./css/images/logo/ohmyfood@2x.svg" alt="logo ohmyfood">
+    <header class="header">
+      <img class="logo" src="./css/images/logo/ohmyfood@2x.svg" alt="logo ohmyfood">
     </header>
     <!-- MAIN -->
     <!-- section search -->
     <section class="search">
-      <div class="search__container">
-        <form action="treatment.php" method="GET">
-          <div class="search-form">
+      <div class="search-container">
+        <form class="form"action="treatment.php" method="GET">
+          <div class="search-form__container">
             <i class="fa fa-map-marker" aria-hidden="true"></i>
-            <input type="search" id="search" value="Paris, Belleville"/> 
+            <input type="research" id="research" value="Paris, Belleville"/> 
           </div>
         </form>
-        <h2 class="heading">Réservez le menu qui vous convient</h2>
-        <p class="search-info__byline">
-            Découvrez des restaurants d'exception, sélectionnés par nos soins
-        </p>
-        <div class="search-btn">
-          <a href="#">
-            <button class="colorful-btn" type="submit">Explorer nos restaurants</button>  
-          </a>
+        <div class="search-info">
+          <h2 class="search-info__heading">Réservez le menu qui vous convient</h2>
+          <p class="search-info__byline">
+              Découvrez des restaurants d'exception, sélectionnés par nos soins.
+          </p>
+          <div class="search-btn__container">
+            <a href="#">
+              <button class="btn" type="submit">Explorer nos restaurants</button>  
+            </a>
+          </div>
         </div>
       </div>
     </section>
     <!-- section fonctionnement -->
     <section class="fonctionnement">
+      <h2 class="heading">Fonctionnemment</h2>
       <ul class="fontctionnement-list">
         <li> 
             <span>1</span>
@@ -108,12 +111,12 @@
      </div>
     </section>
     <!-- FOOTER -->
-    <footer>
-      <div class="footer__container">
-        <h4 class="footer__heading">ohmyfood</h4>
+    <footer class="footer">
+      <!--<div class="footer__container">-->
+        <h1 class="footer__heading">ohmyfood</h1>
         <ul class="footer__list">
           <li>
-            <a class="footer__list link">
+            <a class="footer__link">
               <span class="fa">
                 <i class="fas fa-utensils" aria-hidden="true">
                   <p class="footer__byline">Proposer un restaurant</p>
@@ -134,10 +137,10 @@
             <a class="footer__list link">Mentions légales</a>
           </li>
           <li>
-            <a class="footer__mail link" href="mailto:contact@ohmyfood.com">Contact</a>
+            <a class="footer__link" href="mailto:contact@ohmyfood.com">Contact</a>
           </li>
         </ul>
-      </div>
+      <!--</div>-->
     </footer>
   </body>
 </html>

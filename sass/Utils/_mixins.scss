@@ -1,0 +1,17 @@
+$primary-color: #9356dc;
+$secondary-color: #ff79da;
+$text-color: #fff;
+
+$list-color:  $secondary-color, $primary-color;
+
+@mixin gradient($list) {
+  background: linear-gradient($list);
+  color: $text-color;
+  font-size: 1.1rem;
+}
+
+@mixin btn-colorful{
+  padding: 1.0625rem 2.121rem;
+  border: 0;
+  border-radius: 30px;
+}

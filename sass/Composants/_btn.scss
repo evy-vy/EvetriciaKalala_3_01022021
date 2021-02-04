@@ -1,0 +1,13 @@
+.search {
+  &-btn__container {
+    padding: 10px 30px 10px;
+    margin-bottom: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  & .btn {
+    @include btn-colorful;
+    @include gradient($list-color);
+  }
+}
