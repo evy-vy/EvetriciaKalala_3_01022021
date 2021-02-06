@@ -116,7 +116,7 @@ td:not([align]), th:not([align]) {
   width: 55%;
   font-size: 1rem;
   letter-spacing: 0.0625rem;
-  border: transparent;
+  border: none;
   background-color: #eaeaea;
   padding-left: 1.5625rem;
 }
@@ -238,6 +238,7 @@ footer .footer__link {
   display: flex;
   justify-content: center;
   margin-bottom: 10px;
+  max-width: 100%;
 }
 .resto-cards li > a {
   width: 90%;
@@ -257,7 +258,7 @@ footer .footer__link {
   object-position: bottom;
 }
 .resto-cards li .plat2 {
-  object-position: center;
+  object-position: 0px -150px;
 }
 .resto-cards__tag {
   font-size: 0.9rem;
@@ -297,6 +298,18 @@ footer .footer__link {
   font-weight: bold;
   line-height: 1.7;
   letter-spacing: 0.3px;
+}
+.resto-cards .flaticon-heart {
+  position: relative;
+  left: 95px;
+  font-weight: normal;
+  top: 10px;
+}
+.resto-cards .flaticon-clicker {
+  position: absolute;
+  right: 35px;
+  font-weight: normal;
+  top: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

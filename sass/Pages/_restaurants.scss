@@ -8,10 +8,11 @@
   }
     &-cards {
       padding-bottom: 40px;
-    li {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 10px;
+      li {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+        max-width: 100%;
       > a {
         width: 90%;
         height: 250px;
@@ -30,7 +31,7 @@
         }
       }
       & .plat2 {
-        object-position: center;
+        object-position: 0px -150px;
       } 
     }
     &__tag {
@@ -40,17 +41,29 @@
       & h3 {
       @include overlay-h3;
       }
-    @include overlay; 
+      @include overlay; 
     }
     &__overlay-2 {
       & h3 {
         @include overlay-h3;
       }
-      @include overlay;
-      top: 5px;
-      }
-    } 
-  }
+        @include overlay;
+        top: 5px;
+    }
+    & .flaticon-heart {
+      position: relative;
+      left: 95px;
+      font-weight: normal;
+      top: 10px;
+    }
+    & .flaticon-clicker {
+      position: absolute;
+      right: 35px;
+      font-weight: normal;
+      top: 20px;
+    }
+  } 
+}
 
 
   
