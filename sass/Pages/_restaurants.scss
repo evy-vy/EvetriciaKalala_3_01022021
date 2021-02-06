@@ -1,0 +1,56 @@
+.resto {
+  background-color: $pages-color;
+  &__heading {
+    margin-left: 1.3rem;
+    padding: 30px 0 20px;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+    &-cards {
+      padding-bottom: 40px;
+    li {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+      > a {
+        width: 90%;
+        height: 250px;
+        box-shadow: 5px 5px 20px #f2f2f2;
+        background-color: #fff;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+        > img {
+          width: 100%;
+          height: 68%;
+          object-fit: cover;
+          border-radius: 15px 15px 0 0;
+          object-position: bottom;
+        }
+      }
+      & .plat2 {
+        object-position: center;
+      } 
+    }
+    &__tag {
+      @include new-btn
+      }
+    &__overlay {
+      & h3 {
+      @include overlay-h3;
+      }
+    @include overlay; 
+    }
+    &__overlay-2 {
+      & h3 {
+        @include overlay-h3;
+      }
+      @include overlay;
+      top: 5px;
+      }
+    } 
+  }
+
+
+  

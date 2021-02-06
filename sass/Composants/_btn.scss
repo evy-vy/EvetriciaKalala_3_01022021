@@ -7,7 +7,6 @@
     justify-content: center;
   }
   & .btn {
-    @include btn-colorful;
-    @include gradient($list-color);
+    @include colorful-btn($list-color);
   }
 }

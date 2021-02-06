@@ -1,17 +1,61 @@
+/*variables colors*/
 $primary-color: #9356dc;
 $secondary-color: #ff79da;
+$tertiary-color: #99e2d0;
 $text-color: #fff;
+$pages-color: #f6f6f6;
 
-$list-color:  $secondary-color, $primary-color;
+/*list*/
+$list-color: $secondary-color, $primary-color;
 
-@mixin gradient($list) {
-  background: linear-gradient($list);
+/*position*/
+$top: 25px;
+
+/*mixins*/
+@mixin colorful-btn($list) {
+  background: linear-gradient($list-color);
   color: $text-color;
   font-size: 1.1rem;
-}
-
-@mixin btn-colorful{
   padding: 1.0625rem 2.121rem;
   border: 0;
   border-radius: 30px;
 }
+
+@mixin standard-btn {
+    background-color: $pages-color;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+@mixin new-btn {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+  background: $tertiary-color;
+  border: solid 0;
+  border-radius: 2px;
+  padding: 6px;
+  width: 80px;
+  position: relative;
+  bottom: 158px;
+  left: 241px;
+  color: darken($tertiary-color, 40%);
+}
+
+@mixin overlay {
+  position: relative;
+  top: -25px;
+  left: 20px;
+  line-height: 1.3;
+}
+
+@mixin overlay-h3 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  line-height: 1.7;
+  letter-spacing: 0.3px;
+}
+
+/*functions*/
+
