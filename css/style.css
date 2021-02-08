@@ -1,6 +1,12 @@
 /*variables colors*/
+/*$primary-color: #9356dc;
+$secondary-color: #ff79da;
+$tertiary-color: #99e2d0;
+$text-color: #fff;
+$pages-color: #f6f6f6;*/
 /*list*/
-/*position*/
+/*position
+$top: 25px;*/
 /*mixins*/
 /*functions*/
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
@@ -10,6 +16,10 @@ html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, tex
 
 html, body, p {
   font-family: "roboto", sans-serif;
+}
+
+body {
+  max-width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -27,6 +37,7 @@ ul {
 
 a {
   text-decoration: none;
+  color: #000;
 }
 
 button, input, select, textarea {
@@ -77,6 +88,7 @@ td:not([align]), th:not([align]) {
   padding: 1.0625rem 2.121rem;
   border: 0;
   border-radius: 30px;
+  cursor: pointer;
 }
 
 .header {

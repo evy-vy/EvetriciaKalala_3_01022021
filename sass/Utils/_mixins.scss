@@ -1,17 +1,26 @@
 /*variables colors*/
-$primary-color: #9356dc;
+/*$primary-color: #9356dc;
 $secondary-color: #ff79da;
 $tertiary-color: #99e2d0;
 $text-color: #fff;
-$pages-color: #f6f6f6;
+$pages-color: #f6f6f6;*/
 
 /*list*/
 $list-color: $secondary-color, $primary-color;
 
-/*position*/
-$top: 25px;
+/*position
+$top: 25px;*/
 
 /*mixins*/
+
+@mixin colorful-btn_container {
+  padding: 10px 30px 10px;
+  margin-bottom: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center; 
+}
+
 @mixin colorful-btn($list) {
   background: linear-gradient($list-color);
   color: $text-color;
@@ -19,6 +28,7 @@ $top: 25px;
   padding: 1.0625rem 2.121rem;
   border: 0;
   border-radius: 30px;
+  cursor: pointer;
 }
 
 @mixin standard-btn {
@@ -57,5 +67,50 @@ $top: 25px;
   letter-spacing: 0.3px;
 }
 
-/*functions*/
+@mixin menu-heading {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 30px 25px 20px;
+    font-size: 2rem;
+}
 
+@mixin menus-subtitles {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  padding-left: 0;
+  padding-bottom: 5px;
+  margin-left: 18px;
+  margin-bottom: 20px;
+  width: 45px;
+  align-self: flex-start;
+  border-bottom: solid 3px;
+  border-bottom-color: $tertiary-color ;
+}
+
+@mixin check-btn {
+  align-self: flex-end;
+    position: absolute;
+    right: 13px;
+    background-color: $tertiary-color;
+    padding: 17px 35px 20px 25px;
+    width: 0px;
+    border-radius: 0px 15px 15px 0;
+    border: none;
+}
+
+@mixin check-icon {
+  background-color: #fff;
+    color: $tertiary-color;
+    border: 0px $tertiary-color;
+    border-radius: 50%;
+    font-size: 25px;
+    position:relative;
+    top: 2px;
+    right: 7px;
+}
+
+
+
+
+/*functions*/

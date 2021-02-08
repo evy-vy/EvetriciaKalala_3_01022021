@@ -1,0 +1,102 @@
+header {
+  align-items: center;
+  & .fas.fa-arrow-left {
+    font-size: 1.2rem;  
+    position: relative;
+    left: -50px;
+  }
+}
+
+.menu {
+  position: relative;
+  &-container {
+    background: $pages-color;
+    position: relative;
+    top: 232px;
+    border-radius: 35px 35px 0 0;
+  }
+
+  &__plat3 {
+    object-fit: cover;
+    position: absolute;
+    object-fit: center;
+    height: 290px;
+    width: 100%
+  }
+
+  &-title {
+    @include menu-heading; 
+  }
+
+  &-subtitle {
+  @include menus-subtitles;
+  
+  }
+}
+
+.all-menus {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  & ul {
+    @include standard-btn;
+    width: 93%;
+    padding: 1px 5px 1px 10px;
+    box-shadow: 5px 10px 10px rgba(212, 212, 212, 0.5);
+    /*line-height: 1.5em;*/
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    > li {
+      position: relative;
+      top: 9px;
+    }
+    
+  }
+    & .bold {
+      display: flex;
+      font-weight: bold;
+      position: relative;
+      padding-bottom: 5px;
+    }
+
+  & .price {
+    align-self: flex-end;
+    position: relative;
+    right: 10px;
+    top: -9px;
+    font-weight: bold;
+  }
+    
+
+  & .check-btn {
+  @include check-btn;
+  display: none;
+  }
+
+  & .far.fa-check-circle {
+    @include check-icon;
+  }
+}
+
+.order-container {
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+}
+  .btn--colorful {
+    @include colorful-btn($list-color);
+    font-size: 1rem;
+    letter-spacing: 0.02rem;
+    padding-left: 3.4375rem;
+    padding-right: 3.4375rem;
+    position: relative;
+    top: -30px;
+  }
+
+.footer {
+  position: relative;
+  top: 232px;
+}
