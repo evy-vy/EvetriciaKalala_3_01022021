@@ -1,10 +1,9 @@
 {
   "name": "evetriciakalala_3_01022021",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/style.scss:./css/style.css ./sass/menu.scss:./css/menu.css"
+    "sass": "sass --watch ./sass/style.scss:./css/style.css ./sass/menu-3.scss:./css/menu-3.css"
   },
   "repository": {
     "type": "git",
@@ -15,5 +14,6 @@
   "bugs": {
     "url": "https://github.com/evy-vy/EvetriciaKalala_3_01022021/issues"
   },
-  "homepage": "https://github.com/evy-vy/EvetriciaKalala_3_01022021#readme"
+  "homepage": "https://github.com/evy-vy/EvetriciaKalala_3_01022021#readme",
+  "description": ""
 }

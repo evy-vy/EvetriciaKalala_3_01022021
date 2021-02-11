@@ -1,5 +1,4 @@
 .resto {
-
   background-color: $pages-color;
   &__heading {
     margin-left: 1.3rem;
@@ -7,6 +6,7 @@
     font-size: 1.3rem;
     font-weight: bold;
   }
+  
   &-cards {
     padding-bottom: 40px;
       li {
@@ -54,7 +54,6 @@
       @include overlay;
       top: 13px;
     }
-  
     & .fas.fa-heart {
       @include heart-icon;
     }

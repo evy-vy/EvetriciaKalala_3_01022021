@@ -19,23 +19,30 @@ header {
   &__plat3 {
     object-fit: cover;
     position: absolute;
-    object-fit: center;
     height: 290px;
     width: 100%
   }
 
   &-heading {
     @include menu-heading;
-    .fa-heart { 
+    /*.fa-heart { 
     font-weight: normal;
     position: relative;
-    top: 3px;
+   ;*/
+    & .fas.fa-heart {
+      @include heart-icon; 
+      top: -12px;
     }
   }
 
-  &-subtitle {
-  @include menus-subtitles;
-   }
+
+    & h2 {
+      font-family: shrikhand;
+    }
+
+    &-subtitle {
+    @include menus-subtitles;
+    }
 }
 
 
@@ -45,34 +52,36 @@ header {
   flex-direction: column;
   ul {
     @include standard-btn;
-    width: 93%;
-    padding: 1px 5px 1px 10px;
-    box-shadow: 5px 10px 10px rgba(212, 212, 212, 0.5);
-    border-radius: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 93%;
+    /*new*/ padding: 5px 5px 5px 15px ;
     background-color: #fff;
+    box-shadow: 5px 10px 10px rgba(212, 212, 212, 0.5);
+    border-radius: 15px;
     > li {
       position: relative;
-      top: 9px;
+      /*top: 9px;*/
     }
   }
 
   /* intitulés en gras*/
-    & .bold {
-      display: flex;
-      font-weight: bold;
-      position: relative;
-      padding-bottom: 5px;
-    }
-  
-
-  & .price {
-    align-self: flex-end;
+  & .bold {
+    display: flex;
+    font-weight: bold;
     position: relative;
-    right: 10px;
-    top: -9px;
+    padding-bottom: 5px;
+  }
+
+  & .meal {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  
+  & .price {
+    padding-right: 15px;
     font-weight: bold;
     }
    

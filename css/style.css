@@ -80,15 +80,21 @@ td:not([align]), th:not([align]) {
   justify-content: center;
 }
 .search .btn {
-  background: linear-gradient(175deg, #ff79da, #9356dc 95%);
+  /*background: linear-gradient(175deg,$list-color);*/
+  background: linear-gradient(175deg, #ff79da, #9356dc);
   color: #fff;
   font-size: 1.1rem;
   padding: 1.0625rem 2.121rem;
   border: 0;
   border-radius: 30px;
   box-shadow: 0px 8px 10px #cdcdcd;
-  cursor: pointer;
+  transition: box-shadow 0.02s ease-in-out;
   box-shadow: 0px 8px 10px #cdcdcd;
+}
+.search .btn:hover {
+  cursor: pointer;
+  /*box-shadow: darken(red, 20%);*/
+  background-color: white;
 }
 .header {
   display: flex;
@@ -157,7 +163,9 @@ footer .footer__link {
   color: #fff;
 }
 @media screen and (min-width: 640px) {
+  footer {
     /*footer*/
+  }
   footer .footer {
     margin-bottom: 5px;
   }
@@ -179,7 +187,7 @@ footer .footer__link {
   background-color: #f6f6f6;
 }
 .search-info__heading {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-family: "roboto", sans-serif;
   text-align: center;
   font-weight: bold;
@@ -216,12 +224,13 @@ footer .footer__link {
   padding: 25px;
   margin-bottom: 20px;
   border-radius: 20px;
-  width: 95%;
+  width: 94%;
   display: flex;
   align-items: baseline;
   margin-bottom: 25px;
   font-weight: bold;
   box-shadow: 0px 10px 12px #eaeaea;
+  /*encare bleu de la liste fonctionnement*/
 }
 .fonctionnement ul > li + .blue {
   background-color: #f5edff;
@@ -231,20 +240,26 @@ footer .footer__link {
   font-size: 0.8rem;
   font-weight: normal;
   color: #fff;
-  background-color: #9356dc 95%;
-  border: 0 solid #9356dc 95%;
+  background-color: #9356dc;
+  border: 0 solid #9356dc;
   border-radius: 50%;
   position: relative;
   right: 40px;
   bottom: 2px;
 }
 .fonctionnement ul .fas.fa-store {
-  color: #9356dc 95%;
+  color: #9356dc;
 }
 .fonctionnement ul i {
   position: relative;
   right: 20px;
   color: #7e7e7e;
+}
+@media screen and (min-width: 470px) {
+  .fonctionnement .fonctionnement ul li {
+    width: 50%;
+    display: flex;
+  }
 }
 
 .resto {
@@ -342,22 +357,25 @@ footer .footer__link {
   letter-spacing: 0.3px;
 }
 .resto-cards .fas.fa-heart {
-  /*position: relative;
-  left: 55%;
-  top: 10px;
-  font-weight: normal;
-  font-size: 1.6rem;*/
   position: relative;
-  /*right: -30%;*/
   top: -40px;
   right: 0;
   padding-right: 10px;
   font-weight: normal;
   font-size: 1.6rem;
   align-self: flex-end;
+  transition: color;
+  animation-name: colored-heart;
+}
+.resto-cards .fas.fa-heart:hover {
+  font-weight: bold;
+  color: red;
+  cursor: pointer;
 }
 @media screen and (min-width: 470px) {
+  .resto {
     /*resto-card*/
+  }
   .resto-cards ul {
     display: flex;
     flex-direction: column;

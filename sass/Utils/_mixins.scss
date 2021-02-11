@@ -14,14 +14,20 @@ $list-color: $secondary-color, $primary-color;
 }
 
 @mixin colorful-btn($list) {
-  background: linear-gradient(175deg,$list-color);
+  /*background: linear-gradient(175deg,$list-color);*/
+  background: map-get($color-gradient, gradient);
   color: $text-color;
   font-size: 1.1rem;
   padding: 1.0625rem 2.121rem;
   border: 0;
   border-radius: 30px;
   box-shadow: 0px 8px 10px #cdcdcd;
-  cursor: pointer;
+  transition: box-shadow 0.02s ease-in-out;
+  &:hover {
+    cursor: pointer;
+    /*box-shadow: darken(red, 20%);*/
+    background-color: lighten($secondary-color, 80%) ;
+  }
 }
 
 @mixin standard-btn {
@@ -48,15 +54,27 @@ $list-color: $secondary-color, $primary-color;
 }
 
 @mixin check-btn {
-  align-self: flex-end;
-    position: absolute;
-    right: 13px;
-    background-color: $tertiary-color;
-    padding: 18px 35px 20px 25px;
-    width: 0px;
-    border-radius: 0px 15px 15px 0;
-    border: none;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  /*align-self: flex-end;*/
+  /*right: 13px;*/
+  top: -6px;
+  right: -5px;
+  background-color: $tertiary-color;
+  /*padding: 18px 35px 20px 25px;*/
+  padding: 15px 40px 15px 25px;
+  width: 0px;
+  border-radius: 0px 15px 15px 0;
+  border: none;
+  transition: width 0.2s ease-in;
+  &:hover {
+    cursor: pointer;
+    width: 12%;
+  }
 }
+
+
 
 /*mixins resto cards overlay*/
 @mixin overlay {
@@ -109,23 +127,27 @@ $list-color: $secondary-color, $primary-color;
   right: 7px;
 }
 
+
+
 @mixin heart-icon {
-  /*position: relative;
-  left: 55%;
-  top: 10px;
-  font-weight: normal;
-  font-size: 1.6rem;*/
   position: relative;
-  /*right: -30%;*/
   top: -40px;
   right: 0;
   padding-right: 10px;
   font-weight: normal;
   font-size: 1.6rem;
   align-self: flex-end;
-}
+  transition: color;
+  animation-name: colored-heart;
+  &:hover {
+    font-weight: bold;
+    color: red;
+    cursor: pointer;
+  }
+}    
 
 /*mixins media queries*/
+
 @mixin tablette {
   @media screen and (min-width: map-get($tab-breakpoints, tab)) {
     /*resto-card*/
@@ -141,10 +163,21 @@ $list-color: $secondary-color, $primary-color;
         a {
         width: 70%;
         height: 310px;
-        }
       }
-    }  
+    }
   }
+}
+
+@mixin fonctionnement {
+  @media screen and (min-width: map-get($tab-breakpoints, fonctionnement)) {
+    .fonctionnement ul {
+      li {
+      width: 50%;
+      display: flex;
+      }
+    } 
+  }
+}   
 
 @mixin footer-tab {
   @media screen and (min-width: map-get($tab-breakpoints, footer-tab)) {
