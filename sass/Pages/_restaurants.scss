@@ -5,15 +5,47 @@
     padding: 30px 0 20px;
     font-size: 1.3rem;
     font-weight: bold;
+    @include tablette {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    @include big-tablette {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    @include desktop {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
   }
-  
   &-cards {
     padding-bottom: 40px;
+/*new*/@include tablette {
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+   @include desktop {
+      ul {
+        display: flex;
+        /*flex-direction: unset;*/
+        justify-content: space-around;
+      }
+    }
+  
       li {
       display: flex;
       justify-content: center;
       margin-bottom: 10px;
       max-width: 100%;
+/*new*/ @include tablette {
+        width: 100%;
+      }
     > a {
       width: 90%;
       height: 250px;
@@ -23,28 +55,72 @@
       display: flex;
       flex-direction: column;
       margin-bottom: 10px;
+/*new*/ @include tablette {
+         width: 85%;
+         margin-bottom: 15px;
+        } 
+        @include middle-tablette {
+          width: 75%;
+        }
+        @include big-tablette {
+          width: 50%;
+          /*object-position: unset;*/
+        }
+        @include desktop {
+          /*flex-direction: none;*/
+          width: 290px
+        }
       & img {
         width: 100%;
         height: 68%;
         object-fit: cover;
         border-radius: 15px 15px 0 0;
         object-position: bottom;
+/*new*/ @include tablette {
+          object-position: 0 -85px;
+        }
+        @include big-tablette {
+          object-position: unset;
+        }
+        /*@include desktop {
+          width: 95%;
+        }*/
       }
     }
+  }
       & .plat2 {
         object-position: 0px -150px;
+/*new*/ @include tablette {
+          object-position: 0px -195px;
+        }
+        @include big-tablette {
+          object-position: center;
+        }
+        @include desktop {
+          object-position: 0px -125px;
+        }
       } 
-    }
+  
 
     &__tag {
-      @include new-btn
+      @include new-btn;
+/*new*/@include tablette {
+        top: -60%;
+        left: 75%;
       }
+      @include desktop {
+        left: 195px;
+      }
+    }
 
     &__overlay {
+      @include desktop {
+ /*new*/ top: -17px;
+      } 
       & h3 {
       @include overlay-h3;
       }
-      @include overlay; 
+      @include overlay;
     }
 
     &__overlay-2 {
@@ -56,7 +132,6 @@
     }
     & .fas.fa-heart {
       @include heart-icon;
-    }
+    } 
   } 
-  @include tablette;
 }

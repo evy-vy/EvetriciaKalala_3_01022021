@@ -23,5 +23,5 @@ footer {
   .footer__link {
     color: $text-color;
   }
-  @include footer-tab;
+  @include footer-desktop;
 }

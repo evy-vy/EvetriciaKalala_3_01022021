@@ -5,8 +5,20 @@
 /*mixins resto cards overlay*/
 /*mixins titles & subtitles*/
 /*mixins icons*/
-/*mixins media queries*/
+/*mixins media queries talette*/
+/*@mixin tablette {
+  @media screen and (min-width: map-get($tab-breakpoints, min-tab)) and (max-width: map-get($tab-breakpoints, max-tab)) {
+    @content;
+  }
+}*/
+/*@mixin desktop {
+  @media screen and (min-width: map-get($desktop-breakpoints, min-desktop)) and (max-width: map-get($desktop-breakpoints, max-desktop)) { 
+    @content
+  } 
+}*/
+/*footer*/
 /*media queries map*/
+/*media queries breakpoints*/
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
@@ -80,7 +92,6 @@ td:not([align]), th:not([align]) {
   justify-content: center;
 }
 .search .btn {
-  /*background: linear-gradient(175deg,$list-color);*/
   background: linear-gradient(175deg, #ff79da, #9356dc);
   color: #fff;
   font-size: 1.1rem;
@@ -88,14 +99,15 @@ td:not([align]), th:not([align]) {
   border: 0;
   border-radius: 30px;
   box-shadow: 0px 8px 10px #cdcdcd;
-  transition: box-shadow 0.02s ease-in-out;
-  box-shadow: 0px 8px 10px #cdcdcd;
+  transition: box-shadow 1s ease-in-out;
+  /*box-shadow: 0px 8px 10px #cdcdcd;*/
 }
 .search .btn:hover {
   cursor: pointer;
-  /*box-shadow: darken(red, 20%);*/
-  background-color: white;
+  opacity: 0.9;
+  box-shadow: 0 9px 10px #b9b9b9;
 }
+
 .header {
   display: flex;
   justify-content: center;
@@ -162,15 +174,14 @@ footer .footer__byline {
 footer .footer__link {
   color: #fff;
 }
-@media screen and (min-width: 640px) {
-  footer {
-    /*footer*/
-  }
+@media screen and (min-width: 600px) {
   footer .footer {
+    padding-bottom: 40px;
     margin-bottom: 5px;
   }
   footer .footer__heading {
     text-align: center;
+    padding-bottom: 2rem;
   }
   footer .footer__list {
     max-width: 100%;
@@ -206,25 +217,52 @@ footer .footer__link {
 .fonctionnement {
   padding: 20px;
   margin-bottom: 20px;
+  /*@include fonctionnement;*/
 }
 .fonctionnement__heading {
+  display: flex;
   font-size: 1.3rem;
   font-weight: bold;
   padding: 0.625rem 0 1.25rem;
-  position: relative;
-  left: -5px;
+  /*position: relative;
+  left: -5px;*/
+}
+@media screen and (min-width: 475px) and (max-width: 1100px) {
+  .fonctionnement__heading {
+    justify-content: center;
+    /*margin: 10px 0;*/
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 720px) and (max-width: 1189px) {
+  .fonctionnement__heading {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1190px) and (max-width: 1920px) {
+  .fonctionnement__heading {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
 }
 .fonctionnement ul {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+@media screen and (min-width: 1190px) and (max-width: 1920px) {
+  .fonctionnement ul {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 .fonctionnement ul > li {
   background-color: #f6f6f6;
   padding: 25px;
   margin-bottom: 20px;
   border-radius: 20px;
-  width: 94%;
+  width: 315px;
   display: flex;
   align-items: baseline;
   margin-bottom: 25px;
@@ -255,13 +293,14 @@ footer .footer__link {
   right: 20px;
   color: #7e7e7e;
 }
-@media screen and (min-width: 470px) {
-  .fonctionnement .fonctionnement ul li {
-    width: 50%;
-    display: flex;
-  }
-}
 
+/*@media screen and (min-width: 511px) {/*
+  .fonctionnement ul{
+    li {
+      width: 70%;
+    }
+  }
+}*/
 .resto {
   background-color: #f6f6f6;
 }
@@ -271,14 +310,56 @@ footer .footer__link {
   font-size: 1.3rem;
   font-weight: bold;
 }
+@media screen and (min-width: 475px) and (max-width: 1100px) {
+  .resto__heading {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 720px) and (max-width: 1189px) {
+  .resto__heading {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1190px) and (max-width: 1920px) {
+  .resto__heading {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+}
 .resto-cards {
   padding-bottom: 40px;
+  /*new*/
+}
+@media screen and (min-width: 475px) and (max-width: 1100px) {
+  .resto-cards ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1190px) and (max-width: 1920px) {
+  .resto-cards ul {
+    display: flex;
+    /*flex-direction: unset;*/
+    justify-content: space-around;
+  }
 }
 .resto-cards li {
   display: flex;
   justify-content: center;
   margin-bottom: 10px;
   max-width: 100%;
+  /*new*/
+}
+@media screen and (min-width: 475px) and (max-width: 1100px) {
+  .resto-cards li {
+    width: 100%;
+  }
 }
 .resto-cards li > a {
   width: 90%;
@@ -289,6 +370,30 @@ footer .footer__link {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
+  /*new*/
+}
+@media screen and (min-width: 475px) and (max-width: 1100px) {
+  .resto-cards li > a {
+    width: 85%;
+    margin-bottom: 15px;
+  }
+}
+@media screen and (min-width: 523px) and (max-width: 610px) {
+  .resto-cards li > a {
+    width: 75%;
+  }
+}
+@media screen and (min-width: 720px) and (max-width: 1189px) {
+  .resto-cards li > a {
+    width: 50%;
+    /*object-position: unset;*/
+  }
+}
+@media screen and (min-width: 1190px) and (max-width: 1920px) {
+  .resto-cards li > a {
+    /*flex-direction: none;*/
+    width: 290px;
+  }
 }
 .resto-cards li > a img {
   width: 100%;
@@ -296,9 +401,39 @@ footer .footer__link {
   object-fit: cover;
   border-radius: 15px 15px 0 0;
   object-position: bottom;
+  /*new*/
+  /*@include desktop {
+    width: 95%;
+  }*/
 }
-.resto-cards li .plat2 {
+@media screen and (min-width: 475px) and (max-width: 1100px) {
+  .resto-cards li > a img {
+    object-position: 0 -85px;
+  }
+}
+@media screen and (min-width: 720px) and (max-width: 1189px) {
+  .resto-cards li > a img {
+    object-position: unset;
+  }
+}
+.resto-cards .plat2 {
   object-position: 0px -150px;
+  /*new*/
+}
+@media screen and (min-width: 475px) and (max-width: 1100px) {
+  .resto-cards .plat2 {
+    object-position: 0px -195px;
+  }
+}
+@media screen and (min-width: 720px) and (max-width: 1189px) {
+  .resto-cards .plat2 {
+    object-position: center;
+  }
+}
+@media screen and (min-width: 1190px) and (max-width: 1920px) {
+  .resto-cards .plat2 {
+    object-position: 0px -125px;
+  }
 }
 .resto-cards__tag {
   font-size: 0.9rem;
@@ -314,6 +449,18 @@ footer .footer__link {
   /*bottom: 64%;*/
   left: 71%;
   color: #278870;
+  /*new*/
+}
+@media screen and (min-width: 475px) and (max-width: 1100px) {
+  .resto-cards__tag {
+    top: -60%;
+    left: 75%;
+  }
+}
+@media screen and (min-width: 1190px) and (max-width: 1920px) {
+  .resto-cards__tag {
+    left: 195px;
+  }
 }
 .resto-cards__overlay {
   /*new*/
@@ -328,6 +475,12 @@ footer .footer__link {
   width: 90%;
   /*new*/
   height: 25%;
+}
+@media screen and (min-width: 1190px) and (max-width: 1920px) {
+  .resto-cards__overlay {
+    /*new*/
+    top: -17px;
+  }
 }
 .resto-cards__overlay h3 {
   font-size: 1.1rem;
@@ -364,30 +517,11 @@ footer .footer__link {
   font-weight: normal;
   font-size: 1.6rem;
   align-self: flex-end;
-  transition: color;
-  animation-name: colored-heart;
-}
-.resto-cards .fas.fa-heart:hover {
-  font-weight: bold;
-  color: red;
-  cursor: pointer;
-}
-@media screen and (min-width: 470px) {
-  .resto {
-    /*resto-card*/
-  }
-  .resto-cards ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .resto-cards li {
-    width: 100%;
-  }
-  .resto-cards a {
-    width: 70%;
-    height: 310px;
-  }
+  /*transition: color;
+  &:hover {
+    /*font-weight: bold;
+    color: red;
+    cursor: pointer;*/
 }
 
 /*# sourceMappingURL=style.css.map */
