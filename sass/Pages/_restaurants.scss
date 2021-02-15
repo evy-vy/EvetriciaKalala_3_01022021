@@ -23,7 +23,7 @@
   }
   &-cards {
     padding-bottom: 40px;
-/*new*/@include tablette {
+  @include tablette {
     ul {
       display: flex;
       flex-direction: column;
@@ -33,7 +33,6 @@
    @include desktop {
       ul {
         display: flex;
-        /*flex-direction: unset;*/
         justify-content: space-around;
       }
     }
@@ -43,7 +42,7 @@
       justify-content: center;
       margin-bottom: 10px;
       max-width: 100%;
-/*new*/ @include tablette {
+      @include tablette {
         width: 100%;
       }
     > a {
@@ -55,7 +54,7 @@
       display: flex;
       flex-direction: column;
       margin-bottom: 10px;
-/*new*/ @include tablette {
+      @include tablette {
          width: 85%;
          margin-bottom: 15px;
         } 
@@ -64,10 +63,8 @@
         }
         @include big-tablette {
           width: 50%;
-          /*object-position: unset;*/
         }
         @include desktop {
-          /*flex-direction: none;*/
           width: 290px
         }
       & img {
@@ -76,21 +73,19 @@
         object-fit: cover;
         border-radius: 15px 15px 0 0;
         object-position: bottom;
-/*new*/ @include tablette {
+         @include tablette {
           object-position: 0 -85px;
         }
         @include big-tablette {
           object-position: unset;
         }
-        /*@include desktop {
-          width: 95%;
-        }*/
+        
       }
     }
   }
       & .plat2 {
         object-position: 0px -150px;
-/*new*/ @include tablette {
+        @include tablette {
           object-position: 0px -195px;
         }
         @include big-tablette {
@@ -104,7 +99,7 @@
 
     &__tag {
       @include new-btn;
-/*new*/@include tablette {
+      @include tablette {
         top: -60%;
         left: 75%;
       }
@@ -115,7 +110,7 @@
 
     &__overlay {
       @include desktop {
- /*new*/ top: -17px;
+      top: -17px;
       } 
       & h3 {
       @include overlay-h3;

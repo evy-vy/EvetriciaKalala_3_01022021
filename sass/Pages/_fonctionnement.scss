@@ -6,11 +6,8 @@
     font-size: 1.3rem;
     font-weight: bold;
     padding: 0.625rem 0 1.25rem;
-    /*position: relative;
-    left: -5px;*/
     @include tablette {
       justify-content: center;
-      /*margin: 10px 0;*/
       margin-bottom: 20px;
     }
     @include big-tablette {
@@ -66,13 +63,4 @@
     color: #7e7e7e;
     }
   }
-  /*@include fonctionnement;*/
 }
-
-/*@media screen and (min-width: 511px) {/*
-  .fonctionnement ul{
-    li {
-      width: 70%;
-    }
-  }
-}*/

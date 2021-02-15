@@ -25,16 +25,11 @@ header {
 
   &-heading {
     @include menu-heading;
-    /*.fa-heart { 
-    font-weight: normal;
-    position: relative;
-   ;*/
     & .fas.fa-heart {
       @include heart-icon; 
       top: -12px;
     }
   }
-
 
     & h2 {
       font-family: shrikhand;
@@ -44,7 +39,6 @@ header {
     @include menus-subtitles;
     }
 }
-
 
 .all-menus {
   display: flex;
@@ -56,29 +50,48 @@ header {
     flex-direction: column;
     justify-content: center;
     width: 93%;
-    /*new*/ padding: 10px 5px 10px 15px ;
+    padding: 10px 5px 10px 15px ;
     background-color: #fff;
     box-shadow: 5px 10px 10px rgba(212, 212, 212, 0.5);
     border-radius: 15px;
+    animation-name: fade;
+    animation-delay: 0s;
+    animation-duration: 3s; 
     > li {
       position: relative;
-      /*top: 9px;*/
     }
   }
 
   /* intitulés en gras*/
-  & .bold {
+  & .heading--bold {
     display: flex;
     font-weight: bold;
     position: relative;
     padding-bottom: 5px;
   }
 
-  & .meal {
+  & .meal__entitled--price {
     display: flex;
     justify-content: space-between;
-    flex-direction: row;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition: width 0.2s;
+    & :hover {
+      width: 90%;
+    }
   }
+
+  .meal__entitled--price p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition: width 0.2s;
+    & :hover {
+      width: 90%;
+    }
+  }
+
   
   & .price {
     padding-right: 15px;
@@ -88,7 +101,7 @@ header {
 
   & .check-btn {
   @include check-btn;
-  /*display: none;*/
+  display: none;
   }
 
   & .fas.fa-check-circle {

@@ -4,6 +4,6 @@ $color-gradient: (gradient:linear-gradient(175deg,$list-color));
 /*media queries breakpoints*/
 $mobile-breakpoints : (min-mobile: 375px, max-mobile: /*736px*/ 475px);
 
-$tab-breakpoints: (tab: 470px, min-tab: 475px/*737px*/, max-tab: 1100px, middle-tab-min: /*660px*/523px, middle-tab-max:610px, big-tab-min: 720px, big-tab-max: 1189px );
+$tab-breakpoints: (/*tab: 470px,*/ min-tab: 475px/*737px*/, max-tab: 1100px, middle-tab-min: /*660px*/523px, middle-tab-max:610px, big-tab-min: 720px, big-tab-max: 1189px );
 
 $desktop-breakpoints: (min-desktop: 1190px, max-desktop: 1920px, footer-desktop: 600px);
