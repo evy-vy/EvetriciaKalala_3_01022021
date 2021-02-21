@@ -1,7 +1,3 @@
-
-/*list*/
-$list-color: $secondary-color, $primary-color;
-
 /*mixins*/
 
 /*mixins btn*/
@@ -22,20 +18,22 @@ $list-color: $secondary-color, $primary-color;
   border-radius: 30px;
   box-shadow: 0px 8px 10px #cdcdcd;
   transition: box-shadow 0.2s ease-in-out;
-    &:hover {
-      cursor: pointer;
-        opacity: 0.9;
-        box-shadow: 0 9px 10px #b9b9b9;
-      }
+  &:hover {
+    cursor: pointer;
+      opacity: 0.9;
+      box-shadow: 0 9px 10px #b9b9b9;
+  }
 }
 
+/*li gris de la partie fonctionnement*/
 @mixin standard-btn {
-    background-color: $pages-color;
-    padding: 25px;
-    margin-bottom: 20px;
-    border-radius: 20px;
+  background-color: $pages-color;
+  padding: 25px;
+  margin-bottom: 20px;
+  border-radius: 20px;
 }
 
+/*tag new*/
 @mixin new-btn {
   font-size: 0.9rem;
   font-weight: 600;
@@ -51,14 +49,13 @@ $list-color: $secondary-color, $primary-color;
   color: darken($tertiary-color, 40%);
 }
 
+/*bouton vert coulissant*/
 @mixin check-btn {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   position: absolute;
-  top: -11px;
-  right: -5px;
   background-color: $tertiary-color;
-  padding: 20px 40px 20px 25px;
+  padding: 21px 35px 21px 35px;
   width: 0px;
   border-radius: 0px 15px 15px 0;
   border: none;
@@ -83,7 +80,7 @@ $list-color: $secondary-color, $primary-color;
   letter-spacing: 0.3px;
 }
 
-/*mixins titles & subtitles*/
+/*mixins titles & subtitles partie "body-menu*/
 @mixin menu-heading {
     display: flex;
     justify-content: space-between;
@@ -108,13 +105,11 @@ $list-color: $secondary-color, $primary-color;
 /*mixins icons*/
 @mixin check-icon {
   color: $text-color;
-  border-radius: 50%;
   font-size: 25px;
   position:relative;
-  top: 2px;
-  right: 7px;
 }
 
+/*logo coeur + changement couleur au survol*/
 @mixin heart-icon {
   position: relative;
   top: -40px;
@@ -137,6 +132,24 @@ $list-color: $secondary-color, $primary-color;
     }
   }
 
+  @mixin loading-spiner {
+      display: flex;
+      justify-content: center;
+      &::after {
+        content: "";
+        width: 150px;
+        height: 150px;
+        margin-top: 200px;
+        position: absolute;
+        background:rgb(255, 255, 255, 0.3);
+        border: 3px solid #f6f6f6;
+        border-radius: 50%;
+        border-top-color: $tertiary-color;
+        border-bottom-color: #fffd79;
+        opacity: 0;
+        animation: spin cubic-bezier(.26,1.36,.74,-0.29) 3s;
+    }
+  }
 
   /*mixins media queries*/
 @mixin mobile {
@@ -158,7 +171,7 @@ $list-color: $secondary-color, $primary-color;
 }
 
 @mixin big-tablette {
-  @media screen and (min-width: map-get($tab-breakpoints, big-tab-min)) and (max-width: map-get($tab-breakpoints, big-tab-max)){
+  @media screen and (min-width: map-get($tab-breakpoints, big-tab-min)) and (max-width: map-get($tab-breakpoints, big-tab-max)) {
     @content;
   }
 }
@@ -189,12 +202,6 @@ $list-color: $secondary-color, $primary-color;
   }
 }
   
-/*keyframes apparition menus*/
-@keyframes fade {
-  From {
-    Opacity : 0;
-  }
-  To {
-    Opacity : 1;
-  }
-}
+
+
+

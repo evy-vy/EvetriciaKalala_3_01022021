@@ -17,13 +17,21 @@
   <title>Ohmyfood - menus restaurant à la française</title>
 </head>
   <body>
+    <section class="loader-container">
+      <div class="loading1"></div>
+      <div class="loading2"></div>
+      <div class="loading3"></div>
+      <div class="loading4"></div>
+      <div class="loading5"></div>
+      <div class="loading6"></div>
+    </section>
     <header class="header">
       <a href="../index.html">
         <i class="fas fa-arrow-left"></i>
       </a>
       <img class="logo" src="../css/images/logo/ohmyfood@2x.svg" alt="logo ohmyfood">
     </header>
-    <main>
+    <main class="fade-out">
       <section class="menu">
         <img class="menu__plat3" src="../css/images/restaurants/a_la_française.jpg" alt="focus sur un plat d'oeufs pochés sur son lit d'épinards"/>
         <div class="menu-container">
@@ -33,132 +41,114 @@
           </div>
           <div class="all-menus">
             <h2 class="menu-subtitle">Entrées</h2>
-            <ul class="fade--one">
-              <li>
-                <div class="meals-container">
-                  <h4 class="heading--bold">Tartare de poulpe acidulé</h4>
-                  <div class="meal__entitled--price">
-                    <p>Aux zestes d'orange</p>
-                    <span class="price">25€</span>
-                  </div>
-                  <a href="#" class="check-btn">
-                    <i class="fas fa-check-circle"></i>
-                  </a>
-                </div>  
+            <ul class="meal--one">
+            <li class="meal__container">
+                <div class="meal-box">
+                  <h4 class="meal__heading">Tartare de poulpe acidulé</h4>
+                  <p class="meal__entitled">Aux zestes d'orange</p>
+                </div>    
+                <span class="meal__price">25€</span>
+                <a href="#" class="check-btn">
+                  <i class="fas fa-check-circle"></i>
+                </a>  
               </li>
             </ul>
-            <ul class="fade--two">
-              <li>
-                <div class="meals-container">
-                  <h4 class="heading--bold">Velouté de légumes d'antan</h4>
-                  <div class="meal__entitled--price">
-                    <p>Carotte, panais, topinambour</p>
-                    <span class="price">35€</span>
-                  </div>
-                  <a href="#" class="check-btn">
-                    <i class="fas fa-check-circle"></i>
-                  </a>
-                </div>  
+            <ul class="meal--two">
+              <li class="meal__container">
+                <div class="meal-box">
+                  <h4 class="meal__heading">Velouté de légumes d'antan</h4>
+                  <p class="meal__entitled">Carotte, panais, topinambour</p>
+                </div>
+                <span class="meal__price">35€</span>
+                <a href="#" class="check-btn">
+                  <i class="fas fa-check-circle"></i>
+                </a>
               </li>
             </ul>
-            <ul class="fade--three">
-              <li>
-                <div class="meals-container">
-                  <h4 class="heading--bold">Soupe à l'oignon</h4>
-                  <div class="meal__entitled--price">
-                    <p>Revisitée</p>
-                    <span class="price">20€</span>
-                  </div>
-                  <a href="#" class="check-btn">
-                    <i class="fas fa-check-circle"></i>
-                  </a>
-                </div>  
+            <ul class="meal--three">
+              <li class="meal__container">
+                <div class="meal-box">
+                  <h4 class="meal__heading">Soupe à l'oignon</h4>
+                  <p class="meal__entitled">Revisitée</p>
+                </div>
+                <span class="meal__price">20€</span>
+                <a href="#" class="check-btn">
+                  <i class="fas fa-check-circle"></i>
+                </a> 
               </li>
             </ul>
             <h2 class="menu-subtitle">Plats</h2>
-            <ul>
-              <li>
-                <div class="meals-container">
-                  <h4 class="heading--bold">Coquilles Saint-Jacques</h4>
-                  <div class="meal__entitled--price">
-                    <p>Accompagnées d'une purée de panais</p>
-                    <span class="price">40€</span>
-                  </div>
-                  <a href="#" class="check-btn">
-                    <i class="fas fa-check-circle"></i>
-                  </a>
-                </div>  
+            <ul class="meal--one" >
+              <li class="meal__container">
+                <div class="meal-box">
+                  <h4 class="meal__heading">Coquilles Saint-Jacques</h4>
+                  <p class="meal__entitled">Accompagnées d'une purée de panais</p>
+                </div>
+                <span class="meal__price">40€</span>
+                <a href="#" class="check-btn">
+                  <i class="fas fa-check-circle"></i>
+                </a>
               </li>
             </ul>
-            <ul>
-              <li>
-                <div class="meals-container">
-                  <h4 class="heading--bold">Magret de canard</h4>
-                  <div class="meal__entitled--price">
-                    <p>Et parmentier de pommes de terre</p>
-                    <span class="price">35€</span>
-                  </div>
-                  <a href="#" class="check-btn">
-                    <i class="fas fa-check-circle"></i>
-                  </a>
-                </div>  
+            <ul class="meal--two">
+              <li class="meal__container">
+                <div class="meal-box">
+                  <h4 class="meal__heading">Magret de canard</h4>
+                  <p class="meal__entitled">Et parmentier de pommes de terre</p>
+                </div>
+                <span class="meal__price">35€</span>
+                <a href="#" class="check-btn">
+                  <i class="fas fa-check-circle"></i>
+                </a>  
               </li>
             </ul>
-            <ul>
-              <li>
-                <div class="meals-container">
-                  <h4 class="heading--bold">Pigeonneau d’Ille-et-Vilaine</h4>
-                  <div class="meal__entitled--price">
-                    <p>Sur son lit de gnocchis aux légumes</p>
-                    <span class="price">44€</span>
-                  </div>
-                  <a href="#" class="check-btn">
-                    <i class="fas fa-check-circle"></i>
-                  </a>
-                </div>  
+            <ul class="meal--three">
+              <li class="meal__container">
+                <div class="meal-box">
+                  <h4 class="meal__heading">Pigeonneau d’Ille-et-Vilaine</h4>
+                  <p class="meal__entitled">Sur son lit de gnocchis aux légumes</p>
+                </div>
+                <span class="meal__price">44€</span>
+                <a href="#" class="check-btn">
+                  <i class="fas fa-check-circle"></i>
+                </a>
               </li>
             </ul>
             <h2 class="menu-subtitle">Desserts</h2>
-            <ul>
-              <li>
-                <div class="meals-container">
-                  <h4 class="heading--bold">Pétales de violettes glacés</h4>
-                  <div class="meal__entitled--price">
-                    <p>Et purée de noisettes</p>
-                    <span class="price">18€</span>
-                  </div>
-                  <a href="#" class="check-btn">
-                    <i class="fas fa-check-circle"></i>
-                  </a>
-                </div>  
+            <ul class="meal--one">
+              <li class="meal__container">
+                <div class="meal-box">
+                  <h4 class="meal__heading">Pétales de violettes glacés</h4>
+                  <p class="meal__entitled">Et purée de noisettes</p>
+                </div>
+                <span class="meal__price">18€</span>
+                <a href="#" class="check-btn">
+                  <i class="fas fa-check-circle"></i>
+                </a>
               </li>
             </ul>
-            <ul>
-              <li>
-                <div class="meals-container">
-                  <h4 class="heading--bold">Fondant au chocolat</h4>
-                  <div class="meal__entitled--price">
-                    <p>Revisité</p>
-                    <span class="price">22€</span>
-                  </div>
-                  <a href="#" class="check-btn">
-                    <i class="fas fa-check-circle"></i>
-                  </a>
-                </div>  
+            <ul class="meal--two">
+              <li class="meal__container">
+                <div class="meal-box">
+                  <h4 class="meal__heading">Fondant au chocolat</h4>
+                  <p class="meal__entitled">Revisité</p>
+                </div>
+                <span class="meal__price">22€</span>
+                <a href="#" class="check-btn">
+                  <i class="fas fa-check-circle"></i>
+                </a>
               </li>
             </ul>
-            <ul>
-              <li>
-                <div class="meals-container">
-                  <h4 class="heading--bold">Millefeuille croustillant</h4>
-                  <div class="meal__entitled--price">
-                    <p>Myrtilles et pâte d’amande</p>
-                    <span class="price">23€</span>
-                  </div>
-                  <a href="#" class="check-btn">
-                    <i class="fas fa-check-circle"></i>
-                  </a>
-                </div>  
+            <ul class="meal--three">
+              <li class="meal__container">
+                <div class="meal-box">
+                  <h4 class="meal__heading">Millefeuille croustillant</h4>
+                  <p class="meal__entitled">Myrtilles et pâte d’amande</p>
+                </div>
+                <span class="meal__price">23€</span>
+                <a href="#" class="check-btn">
+                  <i class="fas fa-check-circle"></i>
+                </a>
               </li>
             </ul>
             <div class="order-container">
@@ -198,3 +188,5 @@
       </footer>
     </body>
   </html>
+
+

@@ -1,0 +1,74 @@
+
+.fade-out {
+  animation: body-fade-out 3s ease;
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.loading1 {
+  @include loading-spiner;
+}
+
+.loading2 {
+  @include loading-spiner;
+  &::after {
+    content: "";
+    width: 140px;
+    height: 140px;
+    margin-top: 205px;
+    border-top-color: $primary-color;
+    border-bottom-color: $secondary-color;
+    animation: spin2 cubic-bezier(.26,1.36,.74,-0.29) 3s;
+  }
+}
+
+.loading3 {
+  @include loading-spiner;
+  &::after {
+    content: "";
+    width: 130px;
+    height: 130px;
+    margin-top: 210px;
+    border-top-color: #FEAC5E;
+    border-bottom-color: #4BC0C8;
+  }
+}
+
+.loading4 {
+  @include loading-spiner;
+  &::after {
+    content: "";
+    width: 120px;
+    height: 120px;
+    margin-top: 215px;
+    animation: spin2 cubic-bezier(.26,1.36,.74,-0.29) 3s;
+  }
+}
+
+.loading5 {
+  &::after {
+    content: "";
+    width: 110px;
+    height: 110px;
+    margin-top: 220px;
+    border-top-color: $primary-color;
+    border-bottom-color: $secondary-color;
+  }
+}
+
+.loading6 {
+  @include loading-spiner;
+    &::after {
+      content: "";
+      width: 100px;
+      height: 100px;
+      margin-top: 225px;
+      border-top-color: #FEAC5E;
+      border-bottom-color: #4BC0C8;
+      animation: spin2 cubic-bezier(.26,1.36,.74,-0.29) 3s;
+  }
+}
