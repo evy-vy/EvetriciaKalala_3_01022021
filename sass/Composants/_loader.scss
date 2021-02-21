@@ -1,12 +1,22 @@
 
+
+/*animation apparition du main après loading spinner*/ 
 .fade-out {
   animation: body-fade-out 3s ease;
 }
 
+/*loading spinner*/
 .loader-container {
   display: flex;
   justify-content: center;
   position: relative;
+  & i.miam {
+    position: absolute; 
+    top: 250px; 
+    font-size: 2rem;
+    visibility: hidden;
+    animation: miam 2.8s;
+  }
 }
 
 .loading1 {

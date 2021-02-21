@@ -6,7 +6,7 @@
     transform: translateY(-5px)
   }
   75% {
-    opacity: 0.5;
+    opacity: 0;
   }
   100% {
     opacity: 1; 
@@ -20,7 +20,7 @@
     transform: translateY(-5px);
   }
   85% {
-    opacity: 0.1;
+    opacity: 0;
     transform: translateY(-5px)
   }
   100% {
@@ -29,13 +29,13 @@
   }
 }
 
-@keyframes fade3{
-  0% {
+@keyframes fade3 {
+0% {
     opacity: 0; 
-    transform: translateY(-5px)
+    transform: translate(-5px) 
   }
   95% {
-    opacity: .1;
+    opacity: 0;
     transform: translateY(-5px)
   }
   100% {
@@ -57,9 +57,12 @@
   }
 }
 
-/*loading spiner*/
+/*loading spinner (fade-out du main*/
 @keyframes body-fade-out {
   0% {
+    opacity: 0;
+  }
+  98% {
     opacity: 0;
   }
   100% {
@@ -67,13 +70,27 @@
   }
 }
 
+/*icon couverts spinner*/ 
+@keyframes miam {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  98% {
+    opacity: 0.8;
+    
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/*loading spinner*/
 @keyframes spin {
   0% {
     transform: rotateZ(360deg); 
     opacity: 1;
-  }
-  50% {
-    opacity: 0.8;
   }
   100% {
     transform: rotateZ(0);

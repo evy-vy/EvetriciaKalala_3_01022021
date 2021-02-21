@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*colors variables*/
 /*mixins*/
 /*mixins btn*/
@@ -87,7 +88,7 @@ td:not([align]), th:not([align]) {
     transform: translateY(-5px);
   }
   75% {
-    opacity: 0.5;
+    opacity: 0;
   }
   100% {
     opacity: 1;
@@ -100,7 +101,7 @@ td:not([align]), th:not([align]) {
     transform: translateY(-5px);
   }
   85% {
-    opacity: 0.1;
+    opacity: 0;
     transform: translateY(-5px);
   }
   100% {
@@ -111,10 +112,10 @@ td:not([align]), th:not([align]) {
 @keyframes fade3 {
   0% {
     opacity: 0;
-    transform: translateY(-5px);
+    transform: translate(-5px);
   }
   95% {
-    opacity: 0.1;
+    opacity: 0;
     transform: translateY(-5px);
   }
   100% {
@@ -134,22 +135,37 @@ td:not([align]), th:not([align]) {
     transform: rotate(0deg);
   }
 }
-/*loading spiner*/
+/*loading spinner (fade-out du main*/
 @keyframes body-fade-out {
   0% {
+    opacity: 0;
+  }
+  98% {
     opacity: 0;
   }
   100% {
     opacity: 1;
   }
 }
+/*icon couverts spinner*/
+@keyframes miam {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  98% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+/*loading spinner*/
 @keyframes spin {
   0% {
     transform: rotateZ(360deg);
     opacity: 1;
-  }
-  50% {
-    opacity: 0.8;
   }
   100% {
     transform: rotateZ(0);
@@ -169,37 +185,23 @@ td:not([align]), th:not([align]) {
     opacity: 0;
   }
 }
-.search-btn__container {
-  padding: 10px 30px 10px;
-  margin-bottom: 30px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-.search .btn {
-  background: linear-gradient(175deg, #ff79da, #9356dc);
-  color: #fff;
-  font-size: 1.1rem;
-  padding: 1.0625rem 2.121rem;
-  border: 0;
-  border-radius: 30px;
-  box-shadow: 0px 8px 10px #cdcdcd;
-  transition: box-shadow 0.2s ease-in-out;
-}
-.search .btn:hover {
-  cursor: pointer;
-  opacity: 0.9;
-  box-shadow: 0 9px 10px #b9b9b9;
-}
-
+/*animation apparition du main après loading spinner*/
 .fade-out {
   animation: body-fade-out 3s ease;
 }
 
+/*loading spinner*/
 .loader-container {
   display: flex;
   justify-content: center;
   position: relative;
+}
+.loader-container i.miam {
+  position: absolute;
+  top: 250px;
+  font-size: 2rem;
+  visibility: hidden;
+  animation: miam 2.8s;
 }
 
 .loading1 {
@@ -212,7 +214,7 @@ td:not([align]), th:not([align]) {
   height: 150px;
   margin-top: 200px;
   position: absolute;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.3) 3s;
   border: 3px solid #f6f6f6;
   border-radius: 50%;
   border-top-color: #98e2cf;
@@ -231,7 +233,7 @@ td:not([align]), th:not([align]) {
   height: 150px;
   margin-top: 200px;
   position: absolute;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.3) 3s;
   border: 3px solid #f6f6f6;
   border-radius: 50%;
   border-top-color: #98e2cf;
@@ -259,7 +261,7 @@ td:not([align]), th:not([align]) {
   height: 150px;
   margin-top: 200px;
   position: absolute;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.3) 3s;
   border: 3px solid #f6f6f6;
   border-radius: 50%;
   border-top-color: #98e2cf;
@@ -286,7 +288,7 @@ td:not([align]), th:not([align]) {
   height: 150px;
   margin-top: 200px;
   position: absolute;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.3) 3s;
   border: 3px solid #f6f6f6;
   border-radius: 50%;
   border-top-color: #98e2cf;
@@ -321,7 +323,7 @@ td:not([align]), th:not([align]) {
   height: 150px;
   margin-top: 200px;
   position: absolute;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.3) 3s;
   border: 3px solid #f6f6f6;
   border-radius: 50%;
   border-top-color: #98e2cf;
@@ -339,7 +341,31 @@ td:not([align]), th:not([align]) {
   animation: spin2 cubic-bezier(0.26, 1.36, 0.74, -0.29) 3s;
 }
 
+.search-btn__container {
+  padding: 10px 30px 10px;
+  margin-bottom: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.search .btn {
+  background: linear-gradient(175deg, #ff79da, #9356dc);
+  color: #fff;
+  font-size: 1.1rem;
+  padding: 1.0625rem 2.121rem;
+  border: 0;
+  border-radius: 30px;
+  box-shadow: 0px 8px 10px #cdcdcd;
+  transition: box-shadow 0.2s ease-in-out;
+}
+.search .btn:hover {
+  cursor: pointer;
+  opacity: 0.9;
+  box-shadow: 0 9px 10px #b9b9b9;
+}
+
 .header {
+  /*position: relative;*/
   display: flex;
   justify-content: center;
   padding: 1.5rem 0.625rem 0.3125rem;
