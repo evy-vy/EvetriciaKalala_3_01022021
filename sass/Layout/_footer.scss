@@ -24,4 +24,5 @@ footer {
     color: $text-color;
   }
   @include footer-desktop;
+  animation: body-fade-out 3s ease;
 }

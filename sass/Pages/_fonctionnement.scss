@@ -18,14 +18,22 @@
       justify-content: center;
       margin-bottom: 20px;
     }
+    @include big-desktop {
+      justify-content: center;
+      margin-bottom: 20px;
+    }
   }
   & ul {
     display: flex;
     flex-direction: column;
     align-items: center;
-    @include desktop {
+    /*@include desktop {
       flex-direction: row;
       justify-content: space-between;
+    }*/
+    @include big-desktop {
+      flex-direction: row;
+      justify-content: space-around
     }
     > li {
       @include standard-btn; 

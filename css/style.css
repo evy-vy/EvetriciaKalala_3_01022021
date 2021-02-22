@@ -365,11 +365,11 @@ td:not([align]), th:not([align]) {
 }
 
 .header {
-  /*position: relative;*/
   display: flex;
   justify-content: center;
   padding: 1.5rem 0.625rem 0.3125rem;
   margin-bottom: 0.3125rem;
+  animation: body-fade-out 3s ease;
 }
 .header__logo {
   justify-content: center;
@@ -412,6 +412,7 @@ footer {
   line-height: 1.8rem;
   background-color: #353535;
   color: #fff;
+  animation: body-fade-out 3s ease;
 }
 footer .footer__heading {
   font-size: 1.2rem;
@@ -481,19 +482,25 @@ footer .footer__link {
   font-weight: bold;
   padding: 0.625rem 0 1.25rem;
 }
-@media screen and (min-width: 475px) and (max-width: 1100px) {
+@media screen and (min-width: 476px) and (max-width: 1100px) {
   .fonctionnement__heading {
     justify-content: center;
     margin-bottom: 20px;
   }
 }
-@media screen and (min-width: 720px) and (max-width: 1189px) {
+@media screen and (min-width: 720px) and (max-width: 860px) {
   .fonctionnement__heading {
     justify-content: center;
     margin-bottom: 20px;
   }
 }
-@media screen and (min-width: 1190px) and (max-width: 1920px) {
+@media screen and (min-width: 861px) and (max-width: 1100px) {
+  .fonctionnement__heading {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1101px) and (max-width: 1390px) {
   .fonctionnement__heading {
     justify-content: center;
     margin-bottom: 20px;
@@ -503,11 +510,15 @@ footer .footer__link {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-@media screen and (min-width: 1190px) and (max-width: 1920px) {
-  .fonctionnement ul {
+  /*@include desktop {
     flex-direction: row;
     justify-content: space-between;
+  }*/
+}
+@media screen and (min-width: 1101px) and (max-width: 1390px) {
+  .fonctionnement ul {
+    flex-direction: row;
+    justify-content: space-around;
   }
 }
 .fonctionnement ul > li {
@@ -556,41 +567,62 @@ footer .footer__link {
   font-size: 1.3rem;
   font-weight: bold;
 }
-@media screen and (min-width: 475px) and (max-width: 1100px) {
+@media screen and (min-width: 476px) and (max-width: 1100px) {
   .resto__heading {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
   }
 }
-@media screen and (min-width: 720px) and (max-width: 1189px) {
+@media screen and (min-width: 720px) and (max-width: 860px) {
   .resto__heading {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
   }
 }
-@media screen and (min-width: 1190px) and (max-width: 1920px) {
+@media screen and (min-width: 861px) and (max-width: 1100px) {
   .resto__heading {
     display: flex;
-    justify-content: center;
+    /*justify-content: center;*/
     margin-bottom: 20px;
+    margin-left: 0;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1101px) and (max-width: 1390px) {
+  .resto__heading {
+    display: flex;
+    /*justify-content: center;*/
+    margin-bottom: 20px;
+    margin-left: 0;
+    justify-content: center;
   }
 }
 .resto-cards {
   padding-bottom: 40px;
 }
-@media screen and (min-width: 475px) and (max-width: 1100px) {
+@media screen and (min-width: 476px) and (max-width: 1100px) {
   .resto-cards ul {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 }
-@media screen and (min-width: 1190px) and (max-width: 1920px) {
+@media screen and (min-width: 861px) and (max-width: 1100px) {
   .resto-cards ul {
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1101px) and (max-width: 1390px) {
+  .resto-cards ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }
 .resto-cards li {
@@ -599,9 +631,23 @@ footer .footer__link {
   margin-bottom: 10px;
   max-width: 100%;
 }
-@media screen and (min-width: 475px) and (max-width: 1100px) {
+@media screen and (min-width: 476px) and (max-width: 1100px) {
   .resto-cards li {
     width: 100%;
+  }
+}
+@media screen and (min-width: 861px) and (max-width: 1100px) {
+  .resto-cards li {
+    width: 310px;
+    justify-content: center;
+    margin-left: 30px;
+  }
+}
+@media screen and (min-width: 1101px) and (max-width: 1390px) {
+  .resto-cards li {
+    width: 295px;
+    justify-content: center;
+    margin-left: 0;
   }
 }
 .resto-cards li > a {
@@ -614,25 +660,26 @@ footer .footer__link {
   flex-direction: column;
   margin-bottom: 10px;
 }
-@media screen and (min-width: 475px) and (max-width: 1100px) {
+@media screen and (min-width: 476px) and (max-width: 1100px) {
   .resto-cards li > a {
     width: 85%;
     margin-bottom: 15px;
   }
 }
-@media screen and (min-width: 523px) and (max-width: 610px) {
+@media screen and (min-width: 523px) and (max-width: 719px) {
   .resto-cards li > a {
     width: 75%;
   }
 }
-@media screen and (min-width: 720px) and (max-width: 1189px) {
+@media screen and (min-width: 720px) and (max-width: 860px) {
   .resto-cards li > a {
     width: 50%;
   }
 }
-@media screen and (min-width: 1190px) and (max-width: 1920px) {
+@media screen and (min-width: 861px) and (max-width: 1100px) {
   .resto-cards li > a {
-    width: 290px;
+    /*width: 290px*/
+    width: 100%;
   }
 }
 .resto-cards li > a img {
@@ -642,32 +689,42 @@ footer .footer__link {
   border-radius: 15px 15px 0 0;
   object-position: bottom;
 }
-@media screen and (min-width: 475px) and (max-width: 1100px) {
+@media screen and (min-width: 476px) and (max-width: 1100px) {
   .resto-cards li > a img {
     object-position: 0 -85px;
   }
 }
-@media screen and (min-width: 720px) and (max-width: 1189px) {
+@media screen and (min-width: 720px) and (max-width: 860px) {
   .resto-cards li > a img {
     object-position: unset;
+  }
+}
+@media screen and (min-width: 861px) and (max-width: 1100px) {
+  .resto-cards li > a img {
+    object-position: 0 -35px;
   }
 }
 .resto-cards .plat2 {
   object-position: 0px -150px;
 }
-@media screen and (min-width: 475px) and (max-width: 1100px) {
+@media screen and (min-width: 476px) and (max-width: 1100px) {
   .resto-cards .plat2 {
     object-position: 0px -195px;
   }
 }
-@media screen and (min-width: 720px) and (max-width: 1189px) {
+@media screen and (min-width: 720px) and (max-width: 860px) {
   .resto-cards .plat2 {
     object-position: center;
   }
 }
-@media screen and (min-width: 1190px) and (max-width: 1920px) {
+@media screen and (min-width: 861px) and (max-width: 1100px) {
   .resto-cards .plat2 {
     object-position: 0px -125px;
+  }
+}
+@media screen and (min-width: 861px) and (max-width: 1100px) {
+  .resto-cards .plat2 {
+    object-position: 0px -105px;
   }
 }
 .resto-cards__tag {
@@ -684,15 +741,22 @@ footer .footer__link {
   left: 71%;
   color: #26886f;
 }
-@media screen and (min-width: 475px) and (max-width: 1100px) {
+@media screen and (min-width: 476px) and (max-width: 1100px) {
   .resto-cards__tag {
     top: -60%;
     left: 75%;
   }
 }
-@media screen and (min-width: 1190px) and (max-width: 1920px) {
+@media screen and (min-width: 861px) and (max-width: 1100px) {
   .resto-cards__tag {
-    left: 195px;
+    top: -60%;
+    left: 215px;
+  }
+}
+@media screen and (min-width: 1101px) and (max-width: 1390px) {
+  .resto-cards__tag {
+    top: -60%;
+    left: 67%;
   }
 }
 .resto-cards__overlay {
@@ -705,7 +769,7 @@ footer .footer__link {
   width: 90%;
   height: 25%;
 }
-@media screen and (min-width: 1190px) and (max-width: 1920px) {
+@media screen and (min-width: 861px) and (max-width: 1100px) {
   .resto-cards__overlay {
     top: -17px;
   }

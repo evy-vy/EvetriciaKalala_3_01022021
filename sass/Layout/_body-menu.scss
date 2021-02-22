@@ -15,6 +15,18 @@ header {
     position: relative;
     top: 232px;
     border-radius: 35px 35px 0 0;
+    @include middle-tablette {
+      top: 255px;
+    }
+    @include big-tablette {
+      top: 266px;
+    }
+    @include desktop {
+      top: 265px;
+    }
+    @include big-desktop {
+      top: 265px;
+    }
   }
 
   /*image de fond*/
@@ -46,6 +58,18 @@ header {
   display: flex;
   align-items: center;
   flex-direction: column;
+  @include middle-tablette {
+    margin: 0 85px;
+  }
+  @include big-tablette {
+    margin: 0 170px;
+  }
+  @include desktop {
+    margin: 0 215px;
+  }
+  @include big-desktop {
+    margin: 0 270px;
+  }
   ul {
     @include standard-btn;
     display: flex;
@@ -115,15 +139,15 @@ header {
 
     /*animation apparition ul menus*/
   & .meal--one {
-    animation: fade1 1.2s 3s;
+    animation: fade1 1s 0.2s backwards;
   }
 
   & .meal--two {
-    animation: fade2 1.4s 3.1s;
+    animation: fade2 1.2s 0.2s backwards;
   }
 
   & .meal--three {
-    animation: fade3 1.6s 3.2s;
+    animation: fade3 1.4s 0.2s backwards;
   }
    
   /*bouton vert -> slide au hover*/
@@ -164,4 +188,7 @@ header {
     position: absolute;
     width: 100%;
     bottom: -993px;
+    @include footer-desktop2 {
+      bottom: -960px;
     }
+  }

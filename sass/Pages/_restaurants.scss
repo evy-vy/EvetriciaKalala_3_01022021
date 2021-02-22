@@ -17,8 +17,17 @@
     }
     @include desktop {
       display: flex;
-      justify-content: center;
+      /*justify-content: center;*/
       margin-bottom: 20px;
+      margin-left: 0;
+      justify-content: center;
+    }
+    @include big-desktop {
+      display: flex;
+      /*justify-content: center;*/
+      margin-bottom: 20px;
+      margin-left: 0;
+      justify-content: center;
     }
   }
   &-cards {
@@ -33,7 +42,17 @@
    @include desktop {
       ul {
         display: flex;
-        justify-content: space-around;
+        flex-direction: row;
+        justify-content: /*space-around*/ center;
+        flex-wrap: wrap;
+      }
+    }
+    @include big-desktop {
+      ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: /*space-around*/ center;
+        flex-wrap: wrap;
       }
     }
   
@@ -44,6 +63,16 @@
       max-width: 100%;
       @include tablette {
         width: 100%;
+      }
+      @include desktop {
+        width: 310px;
+        justify-content: center;
+        margin-left: 30px;
+      }
+      @include big-desktop {
+          width: 295px;
+          justify-content: center;
+          margin-left: 0;
       }
     > a {
       width: 90%;
@@ -65,7 +94,8 @@
           width: 50%;
         }
         @include desktop {
-          width: 290px
+          /*width: 290px*/
+          width: 100%;
         }
       & img {
         width: 100%;
@@ -79,7 +109,9 @@
         @include big-tablette {
           object-position: unset;
         }
-        
+        @include desktop {
+          object-position: 0 -35px;
+        }
       }
     }
   }
@@ -94,6 +126,9 @@
         @include desktop {
           object-position: 0px -125px;
         }
+        @include desktop {
+          object-position: 0px -105px;
+        }
       } 
   
 
@@ -104,7 +139,12 @@
         left: 75%;
       }
       @include desktop {
-        left: 195px;
+        top: -60%;
+        left: 215px;
+      }
+      @include big-desktop {
+        top: -60%;
+        left: 67%;
       }
     }
 

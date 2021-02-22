@@ -182,6 +182,12 @@
   } 
 }
 
+@mixin big-desktop {
+  @media screen and (min-width: map-get($desktop-breakpoints, big-desktop-min)) and (max-width: map-get($desktop-breakpoints, big-desktop-max)) { 
+    @content;
+  } 
+}
+
 /*media queries footer*/
 @mixin footer-desktop { 
   @media screen and (min-width: map-get($desktop-breakpoints, footer-desktop)) { 
@@ -202,6 +208,10 @@
   }
 }
   
-
+@mixin footer-desktop2 { 
+  @media screen and (min-width: map-get($desktop-breakpoints, footer-desktop)) { 
+    @content;
+  }
+}
 
 
