@@ -81,14 +81,14 @@
 }
 
 /*mixins titles & subtitles partie "body-menu*/
-@mixin menu-heading {
+@mixin menu__heading {
     display: flex;
     justify-content: space-between;
     padding: 25px 30px 25px 20px;
     font-size: 2rem;
 }
 
-@mixin menus-subtitles {
+@mixin menus--subtitles {
   font-size: 1.1rem;
   text-transform: uppercase;
   letter-spacing: 0.02em;

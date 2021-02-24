@@ -28,7 +28,7 @@ img {
 .menu {
   padding-top: 225px;
   z-index: 3;
-  &-container {
+  &__container {
     background: $pages-color;
     border-radius: 45px 45px 0 0;
     @include tablette {
@@ -114,8 +114,8 @@ img {
     }
   }
 
-  &-heading {
-    @include menu-heading;
+  &__heading {
+    @include menu__heading;
     @include big-tablette{
     @include main-heading__flex;
     }
@@ -159,8 +159,8 @@ img {
     font-family: "shrikhand";
   }
 
-  &-subtitle {
-    @include menus-subtitles;
+  &--subtitle {
+    @include menus--subtitles;
     margin-top: 15px;
   }
 }
@@ -176,15 +176,15 @@ img {
     margin: 0 5px;
   }
 
-&__container--flex {
-  width: 100%;
-  @include desktop {
-  @include menus-container__flex
+  &__container--flex {
+    width: 100%;
+    @include desktop {
+    @include menus-container__flex
+    }
+    @include big-desktop {
+    @include menus-container__flex
+    }
   }
-  @include big-desktop {
-  @include menus-container__flex
-  }
-}
 
   ul {
     @include standard-btn;
@@ -272,7 +272,7 @@ img {
     }
   }
 
-    /*animation apparition ul menus*/
+  /*animation apparition ul menus*/
   & .meal--one {
     animation: fade1 1s 0.2s backwards;
   }
@@ -321,8 +321,4 @@ img {
     top: -30px;
   }
 }
-
-  .footer {
-    width: 100%;
-  }
    

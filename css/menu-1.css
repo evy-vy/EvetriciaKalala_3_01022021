@@ -318,23 +318,23 @@ img {
   z-index: 3;
   /*image de fond*/
 }
-.menu-container {
+.menu__container {
   background: #f6f6f6;
   border-radius: 45px 45px 0 0;
 }
 @media screen and (min-width: 476px) and (max-width: 1100px) {
-  .menu-container {
+  .menu__container {
     margin: 0 5% 0 20%;
     opacity: 0.8;
   }
 }
 @media screen and (min-width: 861px) and (max-width: 1100px) {
-  .menu-container {
+  .menu__container {
     margin: 0 3% 0 18%;
   }
 }
 @media screen and (min-width: 1101px) and (max-width: 1390px) {
-  .menu-container {
+  .menu__container {
     margin: 0 3% 0 30%;
     opacity: 0.8;
   }
@@ -491,31 +491,31 @@ img {
     margin-left: 20px;
   }
 }
-.menu-heading {
+.menu__heading {
   display: flex;
   justify-content: space-between;
   padding: 25px 30px 25px 20px;
   font-size: 2rem;
 }
 @media screen and (min-width: 720px) and (max-width: 860px) {
-  .menu-heading {
+  .menu__heading {
     display: flex;
     justify-content: center;
   }
 }
 @media screen and (min-width: 861px) and (max-width: 1100px) {
-  .menu-heading {
+  .menu__heading {
     display: flex;
     justify-content: center;
   }
 }
 @media screen and (min-width: 1101px) and (max-width: 1390px) {
-  .menu-heading {
+  .menu__heading {
     display: flex;
     justify-content: center;
   }
 }
-.menu-heading .fas.fa-heart {
+.menu__heading .fas.fa-heart {
   position: relative;
   top: -40px;
   right: 0;
@@ -526,53 +526,53 @@ img {
   transition: color 0.3s;
   top: -8px;
 }
-.menu-heading .fas.fa-heart:hover {
+.menu__heading .fas.fa-heart:hover {
   cursor: pointer;
   color: transparent;
   font-weight: bold;
   opacity: 0.7;
 }
-.menu-heading .fas.fa-heart:before {
+.menu__heading .fas.fa-heart:before {
   background: linear-gradient(175deg, #ff79da, #9356dc);
   background-clip: text;
   -webkit-background-clip: text;
 }
 @media screen and (min-width: 476px) and (max-width: 1100px) {
-  .menu-heading .fas.fa-heart {
+  .menu__heading .fas.fa-heart {
     right: -25px;
   }
 }
 @media screen and (min-width: 861px) and (max-width: 1100px) {
-  .menu-heading .fas.fa-heart {
+  .menu__heading .fas.fa-heart {
     right: -15px;
   }
 }
 @media screen and (min-width: 1101px) and (max-width: 1390px) {
-  .menu-heading .fas.fa-heart {
+  .menu__heading .fas.fa-heart {
     right: -15px;
   }
 }
-.menu-heading--main {
+.menu__heading--main {
   font-size: 1.7rem;
 }
 @media screen and (min-width: 320px) and (max-width: 374px) {
-  .menu-heading--main {
+  .menu__heading--main {
     font-size: 1.4rem;
   }
 }
 @media screen and (min-width: 476px) and (max-width: 1100px) {
-  .menu-heading--main {
+  .menu__heading--main {
     font-size: 1.7rem;
   }
 }
 @media screen and (min-width: 861px) and (max-width: 1100px) {
-  .menu-heading--main {
+  .menu__heading--main {
     display: flex;
     justify-content: center;
   }
 }
 @media screen and (min-width: 1101px) and (max-width: 1390px) {
-  .menu-heading--main {
+  .menu__heading--main {
     display: flex;
     justify-content: center;
   }
@@ -580,7 +580,7 @@ img {
 .menu h2 {
   font-family: "shrikhand";
 }
-.menu-subtitle {
+.menu--subtitle {
   font-size: 1.1rem;
   text-transform: uppercase;
   letter-spacing: 0.02em;
@@ -784,10 +784,6 @@ img {
   cursor: pointer;
   opacity: 0.9;
   box-shadow: 0 9px 10px #b9b9b9;
-}
-
-.footer {
-  width: 100%;
 }
 
 /*# sourceMappingURL=menu-1.css.map */
