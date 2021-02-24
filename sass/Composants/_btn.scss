@@ -8,5 +8,8 @@
   }
   & .btn {
     @include colorful-btn($list-color);
+    @include little-mobile {
+      font-size: 0.999rem;
+    }
   }
 }

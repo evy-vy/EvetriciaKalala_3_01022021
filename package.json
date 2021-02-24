@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/style.scss:./css/style.css ./sass/menu-3.scss:./css/menu-3.css"
+    "sass": "sass --watch ./sass/style.scss:./css/style.css ./sass/menu-1.scss:./css/menu-1.css ./sass/menu-2.scss:./css/menu-2.css ./sass/menu-3.scss:./css/menu-3.css ./sass/menu-4.scss:./css/menu-4.css"
   },
   "repository": {
     "type": "git",

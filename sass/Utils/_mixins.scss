@@ -74,7 +74,7 @@
 }
 
 @mixin overlay-h3 {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: bold;
   line-height: 1.7;
   letter-spacing: 0.3px;
@@ -132,13 +132,14 @@
     }
   }
 
-  @mixin loading-spiner {
+  /*loading spinner*/
+  @mixin loading-spinner {
       display: flex;
       justify-content: center;
       &::after {
         content: "";
-        width: 150px;
-        height: 150px;
+        width: 180px;
+        height: 180px;
         margin-top: 200px;
         position: absolute;
         background:rgb(255, 255, 255, 0.3) 3s;
@@ -151,7 +152,45 @@
     }
   }
 
+  /*mise en page*/ 
+  @mixin plat-paramètres {
+    object-fit: cover;
+    position: absolute;
+    height: 279px;
+    width: 100%;
+  }
+
+  @mixin plat-rond {
+    border-radius: 50%;
+    width: 400px;
+    height: 370px;
+    top: 90px;
+    margin-left: 10px;
+  }
+
+  @mixin main-heading__flex {
+    display: flex;
+    justify-content: center;
+  }
+
+  @mixin menus-container__flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  @mixin menus-background--colors {
+    background-color: #fff;
+    background-image: linear-gradient(35deg, transparent 4%, #fbfbfb 30%, transparent 25%, #9356dc, transparent 85%);
+    opacity: 0.9;
+  }
   /*mixins media queries*/
+@mixin little-mobile {
+  @media screen and (min-width: map-get($mobile-breakpoints, little-mobile-min)) and (max-width: map-get($mobile-breakpoints, little-mobile-max)) {
+    @content;
+  }
+}
+
 @mixin mobile {
   @media screen and (min-width: map-get($mobile-breakpoints, min-mobile)) and (max-width: map-get($mobile-breakpoints, max-mobile)) {
     @content;
@@ -207,11 +246,6 @@
     } 
   }
 }
-  
-@mixin footer-desktop2 { 
-  @media screen and (min-width: map-get($desktop-breakpoints, footer-desktop)) { 
-    @content;
-  }
-}
+
 
 

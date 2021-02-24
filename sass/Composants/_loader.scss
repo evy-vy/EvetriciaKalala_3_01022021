@@ -12,23 +12,23 @@
   position: relative;
   & i.miam {
     position: absolute; 
-    top: 250px; 
-    font-size: 2rem;
+    top: 270px; 
+    font-size: 2.8rem;
     visibility: hidden;
     animation: miam 2.8s;
   }
 }
 
 .loading1 {
-  @include loading-spiner;
+  @include loading-spinner;
 }
 
 .loading2 {
-  @include loading-spiner;
+  @include loading-spinner;
   &::after {
     content: "";
-    width: 140px;
-    height: 140px;
+    width: 170px;
+    height: 170px;
     margin-top: 205px;
     border-top-color: $primary-color;
     border-bottom-color: $secondary-color;
@@ -37,11 +37,11 @@
 }
 
 .loading3 {
-  @include loading-spiner;
+  @include loading-spinner;
   &::after {
     content: "";
-    width: 130px;
-    height: 130px;
+    width: 160px;
+    height: 160px;
     margin-top: 210px;
     border-top-color: #FEAC5E;
     border-bottom-color: #4BC0C8;
@@ -49,21 +49,22 @@
 }
 
 .loading4 {
-  @include loading-spiner;
+  @include loading-spinner;
   &::after {
     content: "";
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     margin-top: 215px;
     animation: spin2 cubic-bezier(.26,1.36,.74,-0.29) 3s;
   }
 }
 
 .loading5 {
+  @include loading-spinner;
   &::after {
     content: "";
-    width: 110px;
-    height: 110px;
+    width: 140px;
+    height: 140px;
     margin-top: 220px;
     border-top-color: $primary-color;
     border-bottom-color: $secondary-color;
@@ -71,11 +72,11 @@
 }
 
 .loading6 {
-  @include loading-spiner;
+  @include loading-spinner;
     &::after {
       content: "";
-      width: 100px;
-      height: 100px;
+      width: 130px;
+      height: 130px;
       margin-top: 225px;
       border-top-color: #FEAC5E;
       border-bottom-color: #4BC0C8;

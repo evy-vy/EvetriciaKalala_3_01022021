@@ -12,6 +12,9 @@
       font-weight: bold;
       padding: 0.3125rem 2.0625rem;
       margin: 0.3125rem;
+      @include little-mobile {
+        font-size: 1.5rem;
+      }
     }
     &__byline {
       text-align: center;
@@ -20,6 +23,9 @@
       padding-top: 0.3125rem;
       padding-bottom: 0.9375rem;
       margin: 0.3125rem;
+      @include little-mobile {
+        font-size: 1rem;
+      }
     }
   }
 }

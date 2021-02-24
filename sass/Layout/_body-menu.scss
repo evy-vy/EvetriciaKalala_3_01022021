@@ -5,43 +5,153 @@ header {
     font-size: 1.2rem;  
     position: relative;
     left: -50px;
+    @include little-mobile {
+      left: -35px;
+    }
   }
 }
 
+.body__background {
+  @include tablette {
+  @include menus-background--colors;
+  }
+
+  @include big-desktop {
+    @include menus-background--colors;
+  }
+}
+
+img {
+  z-index: -1000;
+}
+
 .menu {
-  position: relative;
+  padding-top: 225px;
+  z-index: 3;
   &-container {
     background: $pages-color;
-    position: relative;
-    top: 232px;
-    border-radius: 35px 35px 0 0;
-    @include middle-tablette {
-      top: 255px;
-    }
-    @include big-tablette {
-      top: 266px;
+    border-radius: 45px 45px 0 0;
+    @include tablette {
+      margin: 0 5% 0 20%;
+      opacity: 0.8;
     }
     @include desktop {
-      top: 265px;
+      margin: 0 3% 0 18%;
     }
     @include big-desktop {
-      top: 265px;
+      margin: 0 3% 0 30%;
+      opacity: 0.8;
     }
   }
 
   /*image de fond*/
+  &__plat1 {
+    @include plat-paramètres;
+    @include tablette {
+      @include plat-rond;
+    }
+    @include desktop {
+      @include plat-rond;
+      width: 430px;
+      height: 400px;
+    }
+    @include big-desktop {
+      @include plat-rond;
+      width: 535px;
+      height: 485px;
+      margin-left: 20px;
+    }
+  }
+  &__plat2 {
+    @include plat-paramètres;
+    @include tablette {
+      @include plat-rond;
+    }
+    @include desktop {
+      @include plat-rond;
+      width: 430px;
+      height: 400px;
+    }
+    @include big-desktop {
+      @include plat-rond;
+      width: 535px;
+      height: 485px;
+      margin-left: 20px;
+    }
+  }
   &__plat3 {
-    object-fit: cover;
-    position: absolute;
-    height: 290px;
-    width: 100%
+    @include plat-paramètres;
+    @include tablette {
+      @include plat-rond;
+    }
+    @include desktop {
+      @include plat-rond;
+      width: 430px;
+      height: 400px;
+    }
+    @include big-desktop {
+      @include plat-rond;
+      width: 535px;
+      height: 485px;
+      margin-left: 20px;
+    }
+  }
+  &__plat4 {
+    @include plat-paramètres;
+    @include tablette {
+      @include plat-rond;
+    }
+    @include desktop {
+      @include plat-rond;
+      width: 430px;
+      height: 400px;
+    }
+    @include big-desktop {
+      @include plat-rond;
+      width: 535px;
+      height: 485px;
+      margin-left: 20px;
+    }
   }
 
   &-heading {
     @include menu-heading;
+    @include big-tablette{
+    @include main-heading__flex;
+    }
+    @include desktop {
+    @include main-heading__flex;
+    }
+    @include big-desktop {
+    @include main-heading__flex;
+    }
     & .fas.fa-heart {
       @include heart-icon; 
-      top: -12px;
+      top: -8px;
+      @include tablette {
+        right: -25px;
+      }
+      @include desktop {
+        right: -15px;
+      }
+      @include big-desktop {
+          right: -15px;
+      }
+    }
+    &--main {
+      font-size: 1.7rem;
+      @include little-mobile {
+        font-size: 1.4rem;
+      }
+      @include tablette {
+        font-size: 1.7rem;
+      }
+      @include desktop {
+      @include main-heading__flex;
+      }
+      @include big-desktop {
+      @include main-heading__flex;
+      }
     }
   }
 
@@ -51,6 +161,7 @@ header {
 
   &-subtitle {
     @include menus-subtitles;
+    margin-top: 15px;
   }
 }
 
@@ -58,30 +169,45 @@ header {
   display: flex;
   align-items: center;
   flex-direction: column;
-  @include middle-tablette {
-    margin: 0 85px;
-  }
-  @include big-tablette {
-    margin: 0 170px;
-  }
   @include desktop {
-    margin: 0 215px;
+    margin: 0 5px;
   }
   @include big-desktop {
-    margin: 0 270px;
+    margin: 0 5px;
   }
+
+&__container--flex {
+  width: 100%;
+  @include desktop {
+  @include menus-container__flex
+  }
+  @include big-desktop {
+  @include menus-container__flex
+  }
+}
+
   ul {
     @include standard-btn;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     position: relative;
     overflow: hidden;
+    margin-left: 12px;
     width: 93%;
     padding: 10px 10px 10px 15px ;
     background-color: #fff;
     box-shadow: 5px 10px 10px rgba(212, 212, 212, 0.5);
     border-radius: 15px;
     transition: width 1s;
+    @include desktop {
+      width: 47%;
+      margin-left: 0;
+    }
+    @include big-desktop {
+      width: 40%;
+      margin-left: 0;
+    }
     &:hover {
       cursor: pointer;
       &.meal__container {
@@ -114,6 +240,9 @@ header {
     & .meal__heading {
       font-weight: bold;
       transition: width 1s ease-in-out;
+      @include little-mobile {
+        font-size: 0.875rem;
+      }
     }
 
     /*description plat*/
@@ -125,6 +254,9 @@ header {
       white-space: nowrap;
       width: 100%;
       transition: width 0.2s ease-in-out;
+      @include little-mobile {
+        font-size: 0.75rem;
+      }
     }
 
     /*prix*/
@@ -134,6 +266,9 @@ header {
       margin: 2px 15px 2px 10px;
       font-weight: bold;
       transition: transform 0.2s ease;
+      @include little-mobile {
+        font-size: 0.875rem;
+      }
     }
   }
 
@@ -149,7 +284,10 @@ header {
   & .meal--three {
     animation: fade3 1.4s 0.2s backwards;
   }
-   
+  & .meal--four {
+    animation: fade4 1.6s 0.2s backwards;
+  }
+  
   /*bouton vert -> slide au hover*/
   & .check-btn {
     @include check-btn;
@@ -185,10 +323,6 @@ header {
 }
 
   .footer {
-    position: absolute;
     width: 100%;
-    bottom: -993px;
-    @include footer-desktop2 {
-      bottom: -960px;
-    }
   }
+   
