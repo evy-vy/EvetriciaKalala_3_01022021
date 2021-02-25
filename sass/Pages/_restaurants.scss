@@ -100,6 +100,9 @@
         object-fit: cover;
         border-radius: 15px 15px 0 0;
         object-position: bottom;
+        @include mobile{
+          object-position: center;
+        }
          @include tablette {
           object-position: 0 -85px;
         }
@@ -114,8 +117,17 @@
   }
       & .plat2 {
         object-position: 0px -150px;
+        @include little-mobile {
+          object-position: 0px -100px;
+        }
+        @include mobile {
+          object-position: 0px -185px;
+        }
         @include tablette {
           object-position: 0px -195px;
+        }
+        @include middle-tablette {
+          object-position: 0px -235px;
         }
         @include big-tablette {
           object-position: center;
@@ -149,16 +161,25 @@
       @include desktop {
       top: -17px;
       } 
+
       & h3 {
       @include overlay-h3;
+      @include little-mobile {
+      font-size: 1.1rem;
       }
+      }
+
       @include overlay;
     }
 
     &__overlay-2 {
       & h3 {
       @include overlay-h3;
+      @include little-mobile {
+      font-size: 1.1rem;
       }
+      }
+
       @include overlay;
       top: 13px;
     }

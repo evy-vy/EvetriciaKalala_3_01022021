@@ -6,6 +6,9 @@
     font-size: 1.3rem;
     font-weight: bold;
     padding: 0.625rem 0 1.25rem;
+    @include little-mobile {
+      font-size: 1.2rem;
+    }
     @include tablette {
       justify-content: center;
       margin-bottom: 20px;
