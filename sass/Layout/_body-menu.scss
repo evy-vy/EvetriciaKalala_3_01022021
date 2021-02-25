@@ -216,11 +216,14 @@ img {
         }
       & .meal__heading {
         width: 170px;
+        @include little-mobile {
+          width: 150px;
+        }
       }
       & .meal__entitled {
         width: 217px;
         @include little-mobile {
-          width: 205px;
+          width: 160px;
         }
       }
       & .meal__price {
@@ -245,8 +248,11 @@ img {
     }
 
     /*ellipsis plat légumes*/
-    & .vegetables {
+    & .ellipsis {
     width: 85%;
+    @include little-mobile {
+      width: 80%;
+    }
     }
 
     /*titre plat*/
@@ -259,7 +265,7 @@ img {
       width: 100%;
       transition: width 0.2s ease-in-out;
       @include little-mobile {
-        font-size: 0.9375rem;
+        font-size: 0.875rem;
       }
     }
 
@@ -273,7 +279,7 @@ img {
       width: 100%;
       transition: width 0.2s ease-in-out;
       @include little-mobile {
-        font-size: 0.875rem;
+        font-size: 0.8125rem;
       }
     }
 
