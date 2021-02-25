@@ -11,7 +11,7 @@ $list-color: $secondary-color, $primary-color;
 $color-gradient: (gradient:linear-gradient(175deg,$list-color));
 
 /*media queries breakpoints*/
-$mobile-breakpoints : (little-mobile-min: 320px, little-mobile-max:374px, min-mobile: 375px, max-mobile: 475px);
+$mobile-breakpoints : (little-mobile-min: 320px, little-mobile-max: 374px, min-mobile: 375px, max-mobile: 475px);
 
 $tab-breakpoints: (min-tab: 476px, max-tab: 1100px, middle-tab-min:523px, middle-tab-max:719px, big-tab-min: 720px, big-tab-max: 860px );
 

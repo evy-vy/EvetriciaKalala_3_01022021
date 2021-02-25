@@ -194,19 +194,23 @@ img {
     justify-content: center;
     position: relative;
     overflow: hidden;
-    margin-left: 12px;
-    width: 93%;
+    margin-left: 9px;
+    width: 95%;
     padding: 10px 10px 10px 15px ;
     background-color: #fff;
     box-shadow: 5px 10px 10px rgba(212, 212, 212, 0.5);
     border-radius: 15px;
     transition: width 1s;
+    @include little-mobile {
+      margin-left: 4px;
+      width: 97%;
+    }
     @include desktop {
-      width: 47%;
+      width: 48%;
       margin-left: 0;
     }
     @include big-desktop {
-      width: 40%;
+      width: 46%;
       margin-left: 0;
     }
     &:hover {
@@ -247,13 +251,13 @@ img {
       transition: width 0.2s ease-in-out;
     }
 
-    /*ellipsis plat légumes*/
+    /*ellipsis compostion plat*/
     & .ellipsis {
     width: 85%;
     @include little-mobile {
       width: 80%;
     }
-    }
+  }
 
     /*titre plat*/
     & .meal__heading {
