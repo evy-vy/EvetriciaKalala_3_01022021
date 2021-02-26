@@ -100,9 +100,6 @@
         object-fit: cover;
         border-radius: 15px 15px 0 0;
         object-position: bottom;
-        @include mobile{
-          object-position: center;
-        }
          @include tablette {
           object-position: 0 -85px;
         }
