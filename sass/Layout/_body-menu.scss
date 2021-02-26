@@ -187,6 +187,7 @@ img {
     }
   }
 
+  /*ul menus avec animations définies au hover*/
   ul {
     @include standard-btn;
     display: flex;
@@ -245,63 +246,11 @@ img {
     & .meal__container {
       display: flex;
       justify-content: space-between;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
+      @include ellipsis-param;
       transition: width 0.2s ease-in-out;
     }
 
-    /*ellipsis compostion plat*/
-    & .ellipsis {
-    width: 85%;
-    @include little-mobile {
-      width: 80%;
-    }
-  }
-
-    /*titre plat*/
-    & .meal__heading {
-      justify-content: space-between;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;    
-      font-weight: bold;
-      width: 100%;
-      transition: width 0.2s ease-in-out;
-      @include little-mobile {
-        font-size: 0.875rem;
-      }
-    }
-
-    /*description plat*/
-    & .meal__entitled {
-      font-size: 15px;
-      line-height: 1.5rem;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      width: 100%;
-      transition: width 0.2s ease-in-out;
-      @include little-mobile {
-        font-size: 0.8125rem;
-      }
-    }
-
-    /*prix*/
-    & .meal__price {
-      display: flex;
-      align-items: flex-end;
-      margin: 2px 15px 3px 10px;
-      font-weight: bold;
-      transition: transform 0.2s ease;
-      position: relative;
-      @include little-mobile {
-        font-size: 0.875rem;
-      }
-    }
-  }
-
-  /*animation apparition ul menus*/
+    /*animation apparition ul menus*/
   & .meal--one {
     animation: fade1 1s 0.2s backwards;
   }
@@ -332,6 +281,52 @@ img {
     @include check-icon;
     transform: rotate(0);
     transition: 0.1s cubic-bezier(.31,1.22,.43,.69);
+  }
+
+  /*ellipsis compostion plat*/
+  & .ellipsis {
+    width: 85%;
+    @include little-mobile {
+      width: 80%;
+    }
+  }
+
+  /*titre plat*/
+  & .meal__heading {
+    justify-content: space-between;
+    @include ellipsis-param;
+    font-weight: bold;
+    width: 100%;
+    transition: width 0.2s ease-in-out;
+    @include little-mobile {
+      font-size: 0.875rem;
+    }
+  }
+
+  /*description plat*/
+  & .meal__entitled {
+    font-size: 15px;
+    line-height: 1.5rem;
+    @include ellipsis-param;
+    width: 100%;
+    transition: width 0.2s ease-in-out;
+    @include little-mobile {
+      font-size: 0.8125rem;
+    }
+  }
+
+    /*prix*/
+    & .meal__price {
+      display: flex;
+      align-items: flex-end;
+      margin: 2px 15px 3px 10px;
+      font-weight: bold;
+      transition: transform 0.2s ease;
+      position: relative;
+      @include little-mobile {
+        font-size: 0.875rem;
+      }
+    }
   }
 
   /*bouton commander*/

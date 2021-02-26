@@ -23,6 +23,5 @@ footer {
   .footer__link {
     color: $text-color;
   }
-  @include footer-desktop;
   animation: body-fade-out 3s ease;
 }

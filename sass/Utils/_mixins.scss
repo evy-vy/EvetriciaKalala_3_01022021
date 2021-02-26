@@ -25,7 +25,7 @@
   }
 }
 
-/*li gris de la partie fonctionnement*/
+/*btn gris de la partie fonctionnement*/
 @mixin standard-btn {
   background-color: $pages-color;
   padding: 25px;
@@ -43,9 +43,6 @@
   border-radius: 2px;
   padding: 6px;
   width: 80px;
-  position: relative;
-  top: -64%;
-  left: 71%;
   color: darken($tertiary-color, 40%);
 }
 
@@ -65,9 +62,7 @@
 @mixin overlay {
   display: flex;
   flex-direction: column;
-  position: relative;
-  top: -17px;
-  left: 20px;
+  margin: 10px 0 10px 20px;
   line-height: 1.3;
   width: 90%;
   height: 25%;
@@ -126,11 +121,9 @@
     cursor: pointer;
     color: transparent;
     font-weight: bold;
-    opacity: 0.4;
     }
     &:before {
     background: map-get($color-gradient, gradient);
-    background-clip: text;
     -webkit-background-clip: text;
     }
   }
@@ -156,7 +149,13 @@
     }
   }
 
-  /*mise en page*/ 
+  /*mise en page*/
+  @mixin ellipsis-param {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
   @mixin plat-paramètres {
     object-fit: cover;
     position: absolute;
@@ -188,7 +187,9 @@
     background-image: linear-gradient(35deg, transparent 4%, #fbfbfb 30%, transparent 25%, #9356dc, transparent 85%);
     opacity: 0.9;
   }
-  /*mixins media queries*/
+
+
+/*mixins media queries*/
 @mixin little-mobile {
   @media screen and (min-width: map-get($mobile-breakpoints, little-mobile-min)) and (max-width: map-get($mobile-breakpoints, little-mobile-max)) {
     @content;
@@ -226,28 +227,8 @@
 }
 
 @mixin big-desktop {
-  @media screen and (min-width: map-get($desktop-breakpoints, big-desktop-min)) and (max-width: map-get($desktop-breakpoints, big-desktop-max)) { 
+  @media screen and (min-width: map-get($desktop-breakpoints, big-desktop-min)) { 
     @content;
-  } 
-}
-
-/*media queries footer*/
-@mixin footer-desktop { 
-  @media screen and (min-width: map-get($desktop-breakpoints, footer-desktop)) { 
-
-  .footer {
-    padding-bottom: 40px;
-    margin-bottom: 5px;
-    &__heading {
-      text-align: center;
-      padding-bottom: 2rem;
-    }
-    &__list {
-      max-width: 100%;
-      display: flex;
-      justify-content: space-between;
-      }
-    } 
   }
 }
 
