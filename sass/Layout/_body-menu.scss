@@ -53,14 +53,11 @@ img {
     }
     @include desktop {
       @include plat-rond;
-      width: 430px;
-      height: 400px;
+      @include plat-rond-desktop-size;
     }
     @include big-desktop {
       @include plat-rond;
-      width: 535px;
-      height: 485px;
-      margin-left: 20px;
+      @include plat-rond-big-desktop-size;
     }
   }
   &__plat2 {
@@ -70,14 +67,11 @@ img {
     }
     @include desktop {
       @include plat-rond;
-      width: 430px;
-      height: 400px;
+      @include plat-rond-desktop-size;
     }
     @include big-desktop {
       @include plat-rond;
-      width: 535px;
-      height: 485px;
-      margin-left: 20px;
+      @include plat-rond-big-desktop-size;
     }
   }
   &__plat3 {
@@ -87,14 +81,11 @@ img {
     }
     @include desktop {
       @include plat-rond;
-      width: 430px;
-      height: 400px;
+      @include plat-rond-desktop-size;
     }
     @include big-desktop {
       @include plat-rond;
-      width: 535px;
-      height: 485px;
-      margin-left: 20px;
+      @include plat-rond-big-desktop-size;
     }
   }
   &__plat4 {
@@ -104,14 +95,11 @@ img {
     }
     @include desktop {
       @include plat-rond;
-      width: 430px;
-      height: 400px;
+      @include plat-rond-desktop-size;
     }
     @include big-desktop {
       @include plat-rond;
-      width: 535px;
-      height: 485px;
-      margin-left: 20px;
+      @include plat-rond-big-desktop-size;
     }
   }
 
@@ -250,40 +238,7 @@ img {
       transition: width 0.2s ease-in-out;
     }
 
-    /*animation apparition ul menus*/
-  & .meal--one {
-    animation: fade1 1s 0.2s backwards;
-  }
-
-  & .meal--two {
-    animation: fade2 1.2s 0.2s backwards;
-  }
-
-  & .meal--three {
-    animation: fade3 1.4s 0.2s backwards;
-  }
-  & .meal--four {
-    animation: fade4 1.6s 0.2s backwards;
-  }
-  
-  /*bouton vert -> slide au hover*/
-  & .check-btn {
-    @include check-btn;
-    margin-right: 1px;
-    top: 0; 
-    right: -1px;
-    transform: translateX(73px);
-    transition: transform 0.2s ease;
-  }
-
-  /*animation logo coche -> rotation*/
-  & .fas.fa-check-circle {
-    @include check-icon;
-    transform: rotate(0);
-    transition: 0.1s cubic-bezier(.31,1.22,.43,.69);
-  }
-
-  /*ellipsis compostion plat*/
+     /*ellipsis compostion plat*/
   & .ellipsis {
     width: 85%;
     @include little-mobile {
@@ -327,6 +282,39 @@ img {
         font-size: 0.875rem;
       }
     }
+  }
+
+    /*animation apparition ul menus*/
+  & .meal--one {
+    animation: fade1 1s 0.2s backwards;
+  }
+
+  & .meal--two {
+    animation: fade2 1.2s 0.2s backwards;
+  }
+
+  & .meal--three {
+    animation: fade3 1.4s 0.2s backwards;
+  }
+  & .meal--four {
+    animation: fade4 1.6s 0.2s backwards;
+  }
+  
+  /*bouton vert -> slide au hover*/
+  & .check-btn {
+    @include check-btn;
+    margin-right: 1px;
+    top: 0; 
+    right: -1px;
+    transform: translateX(73px);
+    transition: transform 0.2s ease;
+  }
+
+  /*animation logo coche -> rotation*/
+  & .fas.fa-check-circle {
+    @include check-icon;
+    transform: rotate(0);
+    transition: 0.1s cubic-bezier(.31,1.22,.43,.69);
   }
 
   /*bouton commander*/

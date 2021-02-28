@@ -171,6 +171,17 @@
     margin-left: 10px;
   }
 
+  @mixin plat-rond-desktop-size {
+    width: 26.875rem;
+    height: 25rem;
+  }
+
+  @mixin plat-rond-big-desktop-size {
+    width: 33.43rem;
+    height: 30.31rem;
+    margin-left: 1.25rem;
+  }
+
   @mixin main-heading__flex {
     display: flex;
     justify-content: center;
