@@ -1,18 +1,16 @@
 
-/*---------------------- lists -------------------------*/
-
-/* color list for linear gradient*/
-$list-color: $secondary-color, $primary-color;
-
-
 /*-------------------------- Maps --------------------------*/
 
 /*linear grandient map*/
-$color-gradient: (gradient:linear-gradient(175deg,$list-color));
+$color-gradient: (gradient:linear-gradient(175deg, $secondary-color, $primary-color));
 
-/*media queries breakpoints*/
+/*------------------ media queries breakpoints -------------*/
+
+/*media mobile */
 $mobile-breakpoints : (little-mobile-min: 320px, little-mobile-max: 374px, min-mobile: 375px, max-mobile: 475px);
 
+/*media tablette*/
 $tab-breakpoints: (min-tab: 476px, max-tab: 1100px, middle-tab-min:523px, middle-tab-max:719px, big-tab-min: 720px, big-tab-max: 860px );
 
+/*media desktop*/
 $desktop-breakpoints: (min-desktop: 861px, max-desktop: 1100px, big-desktop-min: 1101px);

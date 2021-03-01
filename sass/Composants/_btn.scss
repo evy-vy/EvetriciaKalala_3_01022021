@@ -7,7 +7,7 @@
     justify-content: center;
   }
   & .btn {
-    @include colorful-btn($list-color);
+    @include colorful-btn;
     @include little-mobile {
       font-size: 0.999rem;
     }

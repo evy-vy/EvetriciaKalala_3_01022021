@@ -324,7 +324,7 @@ img {
     justify-content: center;
   }
   .btn--colorful {
-    @include colorful-btn($list-color);
+    @include colorful-btn;
     font-size: 1rem;
     letter-spacing: 0.02rem;
     padding-left: 3.4375rem;
