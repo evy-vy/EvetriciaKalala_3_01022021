@@ -463,8 +463,8 @@ td:not([align]), th:not([align]) {
   width: 160px;
   height: 160px;
   margin-top: 210px;
-  border-top-color: #FEAC5E;
-  border-bottom-color: #4BC0C8;
+  border-top-color: $ring-top-color;
+  border-bottom-color: $ring-bottom-color;
 }
 
 .loading4 {
@@ -559,8 +559,8 @@ td:not([align]), th:not([align]) {
   width: 130px;
   height: 130px;
   margin-top: 225px;
-  border-top-color: #FEAC5E;
-  border-bottom-color: #4BC0C8;
+  border-top-color: $ring-top-color;
+  border-bottom-color: $ring-bottom-color;
   -webkit-animation: spin2 cubic-bezier(0.26, 1.36, 0.74, -0.29) 3s;
           animation: spin2 cubic-bezier(0.26, 1.36, 0.74, -0.29) 3s;
 }

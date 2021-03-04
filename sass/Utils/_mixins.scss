@@ -1,6 +1,31 @@
-/*mixins*/
+                                      /*mixins*/
 
-/*mixins btn*/
+/*----------------------- mixin du loading spinner---------------*/
+
+  /*loading spinner*/
+  @mixin loading-spinner {
+    display: flex;
+    justify-content: center;
+    z-index: -500;
+    &::after {
+      content: "";
+      width: 180px;
+      height: 180px;
+      margin-top: 200px;
+      position: absolute;
+      background:rgb(255, 255, 255, 0.3);
+      border: 3px solid #f6f6f6;
+      border-radius: 50%;
+      border-top-color: $tertiary-color;
+      border-bottom-color: #fffd79;
+      opacity: 0;
+      animation: spin cubic-bezier(.26,1.36,.74,-0.29) 3s;
+  }
+}
+
+/*--------------mixins valable pour toutes les pages----------------*/
+
+/*mixin conteneur btn coloré*/
 @mixin colorful-btn_container {
   padding: 10px 30px 10px;
   margin-bottom: 30px;
@@ -9,6 +34,7 @@
   justify-content: center;
 }
 
+/*mixin btn coloré + transition*/
 @mixin colorful-btn {
   background: map-get($color-gradient, gradient);
   color: $text-color;
@@ -17,15 +43,40 @@
   border: 0;
   border-radius: 30px;
   box-shadow: 0px 8px 10px #cdcdcd;
-  transition: box-shadow 0.2s ease-in-out;
+  opacity: 1;
+  transform: opacity, box-shadow;
+  transition: all 0.3s ease-in;
   &:hover {
     cursor: pointer;
     opacity: 0.8;
-    box-shadow: 0 9px 10px #adacac;
+    box-shadow: 0 9px 10px darken(#cdcdcd, 10%);
   }
 }
 
-/*btn gris de la partie fonctionnement*/
+/*mixin logo coeur + remplissage au survol*/
+@mixin heart-icon {
+  position: relative;
+  top: -40px;
+  right: 0;
+  padding-right: 10px;
+  font-weight: normal;
+  font-size: 1.6rem;
+  align-self: flex-end;
+  transition: color 0.2s;
+    &:hover {
+      cursor: pointer;
+      color: transparent;
+      font-weight: bold;
+    }
+    &:before {
+      background: map-get($color-gradient, gradient);
+      -webkit-background-clip: text;
+    }
+  }
+
+/*----------------- mixins de la page d'accueil ------------------*/
+
+/*mixin des btn gris de la partie fonctionnement*/
 @mixin standard-btn {
   background-color: $pages-color;
   padding: 25px;
@@ -33,7 +84,7 @@
   border-radius: 20px;
 }
 
-/*tag new*/
+/*mixin des tag "nouveau"*/
 @mixin new-btn {
   font-size: 0.9rem;
   font-weight: 600;
@@ -46,18 +97,6 @@
   color: darken($tertiary-color, 40%);
 }
 
-/*bouton vert coulissant*/
-@mixin check-btn {
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  background-color: $tertiary-color;
-  padding: 21px 30px 21px 30px;
-  width: 0px;
-  border-radius: 0px 15px 15px 0;
-  border: none;
-}
-
 /*mixins resto cards overlay*/
 @mixin overlay {
   display: flex;
@@ -68,6 +107,7 @@
   height: 25%;
 }
 
+/*mixin des titres h3 des overlay*/
 @mixin overlay-h3 {
   font-size: 1.2rem;
   font-weight: bold;
@@ -75,7 +115,9 @@
   letter-spacing: 0.3px;
 }
 
-/*mixins titles & subtitles partie "body-menu*/
+/*---------------------- mixins des pages menus---------------------------*/
+
+/*mixins des titres de partie "body-menu"*/
 @mixin menu__heading {
     display: flex;
     justify-content: space-between;
@@ -83,6 +125,7 @@
     font-size: 2rem;
 }
 
+/*mixins des sous-titres de partie "body-menu"*/
 @mixin menus--subtitles {
   font-size: 1.1rem;
   text-transform: uppercase;
@@ -100,107 +143,84 @@
   }
 }
 
-/*mixins icons*/
+/* mixins des ellipsis utilisés pour titre sous titres des menus body-menu */
+@mixin ellipsis-param {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* mixin des boutons vert coulissants body-menu */
+@mixin check-btn {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  background-color: $tertiary-color;
+  padding: 21px 30px 21px 30px;
+  width: 0px;
+  border-radius: 0px 15px 15px 0;
+  border: none;
+}
+
+/*mixins de la coche body-menu*/
 @mixin check-icon {
   color: $text-color;
   font-size: 25px;
   position: relative;
 }
 
-/*logo coeur + changement couleur au survol*/
-@mixin heart-icon {
-  position: relative;
-  top: -40px;
-  right: 0;
-  padding-right: 10px;
-  font-weight: normal;
-  font-size: 1.6rem;
-  align-self: flex-end;
-  transition: color 0.2s;
-    &:hover {
-    cursor: pointer;
-    color: transparent;
-    font-weight: bold;
-    }
-    &:before {
-    background: map-get($color-gradient, gradient);
-    -webkit-background-clip: text;
-    }
-  }
+/*---------------------- mixins design tablette et desktop -------------------*/
 
-  /*loading spinner*/
-  @mixin loading-spinner {
-      display: flex;
-      justify-content: center;
-      z-index: -500;
-      &::after {
-        content: "";
-        width: 180px;
-        height: 180px;
-        margin-top: 200px;
-        position: absolute;
-        background:rgb(255, 255, 255, 0.3);
-        border: 3px solid #f6f6f6;
-        border-radius: 50%;
-        border-top-color: $tertiary-color;
-        border-bottom-color: #fffd79;
-        opacity: 0;
-        animation: spin cubic-bezier(.26,1.36,.74,-0.29) 3s;
-    }
-  }
+/*mixin couleur de fond*/
+@mixin menus-background--colors {
+  background-color: #fff;
+  background-image: linear-gradient(35deg, transparent 4%, #fbfbfb 30%, transparent 25%, #9356dc, transparent 85%);
+  opacity: 0.9;
+}
 
-  /*mise en page*/
-  @mixin ellipsis-param {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
+/*mixins de mise en page titre*/
+@mixin main-heading__flex {
+  display: flex;
+  justify-content: center;
+}
 
-  @mixin plat-paramètres {
-    object-fit: cover;
-    position: absolute;
-    height: 279px;
-    width: 100%;
-  }
+/*mixins de mise en page conteneur*/
+@mixin menus-container__flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 
-  @mixin plat-rond {
-    border-radius: 50%;
-    width: 400px;
-    height: 370px;
-    top: 90px;
-    margin-left: 10px;
-  }
+/*mixin images plats*/
+@mixin plat-paramètres {
+  object-fit: cover;
+  position: absolute;
+  height: 279px;
+  width: 100%;
+}
 
-  @mixin plat-rond-desktop-size {
-    width: 26.875rem;
-    height: 25rem;
-  }
+/*mixin image plats ronds*/
+@mixin plat-rond {
+  border-radius: 50%;
+  width: 400px;
+  height: 370px;
+  top: 90px;
+  margin-left: 10px;
+}
 
-  @mixin plat-rond-big-desktop-size {
-    width: 33.43rem;
-    height: 30.31rem;
-    margin-left: 1.25rem;
-  }
+@mixin plat-rond-desktop-size {
+  width: 26.875rem;
+  height: 25rem;
+}
 
-  @mixin main-heading__flex {
-    display: flex;
-    justify-content: center;
-  }
+@mixin plat-rond-big-desktop-size {
+  width: 33.43rem;
+  height: 30.31rem;
+  margin-left: 1.25rem;
+}
 
-  @mixin menus-container__flex {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
+/*----------------------------mixins media queries----------------------------*/
 
-  @mixin menus-background--colors {
-    background-color: #fff;
-    background-image: linear-gradient(35deg, transparent 4%, #fbfbfb 30%, transparent 25%, #9356dc, transparent 85%);
-    opacity: 0.9;
-  }
-
-
-/*mixins media queries*/
 @mixin little-mobile {
   @media screen and (min-width: map-get($mobile-breakpoints, little-mobile-min)) and (max-width: map-get($mobile-breakpoints, little-mobile-max)) {
     @content;

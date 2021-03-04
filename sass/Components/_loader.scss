@@ -15,7 +15,7 @@
     top: 270px; 
     font-size: 2.8rem;
     visibility: hidden;
-    animation: miam 2.8s;
+    animation: miam 2.9s;
   }
 }
 
@@ -43,8 +43,8 @@
     width: 160px;
     height: 160px;
     margin-top: 210px;
-    border-top-color: #FEAC5E;
-    border-bottom-color: #4BC0C8;
+    border-top-color: $ring-top-color;
+    border-bottom-color: $ring-bottom-color;
   }
 }
 
@@ -78,8 +78,8 @@
       width: 130px;
       height: 130px;
       margin-top: 225px;
-      border-top-color: #FEAC5E;
-      border-bottom-color: #4BC0C8;
+      border-top-color: $ring-top-color;
+      border-bottom-color: $ring-bottom-color;
       animation: spin2 cubic-bezier(.26,1.36,.74,-0.29) 3s;
   }
 }

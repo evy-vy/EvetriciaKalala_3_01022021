@@ -12,11 +12,11 @@
   }
 }
 
+/*-- design violet version tablette et desktop --*/
 .body__background {
   @include tablette {
-  @include menus-background--colors;
+    @include menus-background--colors;
   }
-
   @include big-desktop {
     @include menus-background--colors;
   }
@@ -45,49 +45,10 @@ img {
     }
   }
 
-  /*image de fond*/
-  &__plat1 {
-    @include plat-paramètres;
-    @include tablette {
-      @include plat-rond;
-    }
-    @include desktop {
-      @include plat-rond;
-      @include plat-rond-desktop-size;
-    }
-    @include big-desktop {
-      @include plat-rond;
-      @include plat-rond-big-desktop-size;
-    }
-  }
-  &__plat2 {
-    @include plat-paramètres;
-    @include tablette {
-      @include plat-rond;
-    }
-    @include desktop {
-      @include plat-rond;
-      @include plat-rond-desktop-size;
-    }
-    @include big-desktop {
-      @include plat-rond;
-      @include plat-rond-big-desktop-size;
-    }
-  }
-  &__plat3 {
-    @include plat-paramètres;
-    @include tablette {
-      @include plat-rond;
-    }
-    @include desktop {
-      @include plat-rond;
-      @include plat-rond-desktop-size;
-    }
-    @include big-desktop {
-      @include plat-rond;
-      @include plat-rond-big-desktop-size;
-    }
-  }
+/*--image de fond--*/
+  &__plat1, 
+  &__plat2,
+  &__plat3,
   &__plat4 {
     @include plat-paramètres;
     @include tablette {
@@ -105,28 +66,22 @@ img {
 
   &__heading {
     @include menu__heading;
-    @include big-tablette{
-    @include main-heading__flex;
-    }
-    @include desktop {
-    @include main-heading__flex;
-    }
+    @include big-tablette;
+    @include desktop; 
     @include big-desktop {
-    @include main-heading__flex;
+     @include main-heading__flex;
     }
+
     & .fas.fa-heart {
       @include heart-icon; 
       top: -8px;
-      @include tablette {
+      @include tablette;
+      @include desktop;
+      @include big-desktop {
         right: -25px;
       }
-      @include desktop {
-        right: -15px;
-      }
-      @include big-desktop {
-          right: -15px;
-      }
     }
+
     &--main {
       font-size: 1.7rem;
       @include little-mobile {
@@ -136,9 +91,6 @@ img {
         font-size: 1.7rem;
       }
       @include desktop {
-      @include main-heading__flex;
-      }
-      @include big-desktop {
       @include main-heading__flex;
       }
     }
@@ -175,8 +127,8 @@ img {
     }
   }
 
-  /*ul menus avec animations définies au hover*/
-  ul {
+/*-- ul menus avec animations définies au hover --*/
+  & ul {
     @include standard-btn;
     display: flex;
     flex-direction: column;
@@ -189,7 +141,6 @@ img {
     background-color: #fff;
     box-shadow: 5px 10px 10px rgba(212, 212, 212, 0.5);
     border-radius: 15px;
-    transition: width 1s;
     @include little-mobile {
       margin-left: 7px;
       width: 96%;
@@ -202,75 +153,30 @@ img {
       width: 46%;
       margin-left: 0;
     }
-    &:hover {
-      cursor: pointer;
-      &.meal__container {
-        width: 210px;
-        }
-      & .meal__heading {
-        width: 170px;
-        @include little-mobile {
-          width: 150px;
-        }
-      }
-      & .meal__entitled {
-        width: 217px;
-        @include little-mobile {
-          width: 160px;
-        }
-      }
-      & .meal__price {
-       transform: translate(-50px);
-       right: 5px;
-      }
-      & .check-btn {
-        transform: translate(0);
-      }
-      & .fas.fa-check-circle {
-        animation: rotate 0.3s;
-      }
-    }
-  
     & .meal__container {
       display: flex;
       justify-content: space-between;
+    }
+    & .meal__heading {
+      justify-content: space-between;
       @include ellipsis-param;
+      font-weight: bold;
+      width: 100%;
       transition: width 0.2s ease-in-out;
+      @include little-mobile {
+        font-size: 0.875rem;
+      }
     }
-
-     /*ellipsis compostion plat*/
-  & .ellipsis {
-    width: 85%;
-    @include little-mobile {
-      width: 80%;
+    & .meal__entitled {
+      font-size: 15px;
+      line-height: 1.5rem;
+      @include ellipsis-param;
+      width: 100%;
+      transition: width 0.2s ease-in-out;
+      @include little-mobile {
+        font-size: 0.8125rem;
+      }
     }
-  }
-
-  /*titre plat*/
-  & .meal__heading {
-    justify-content: space-between;
-    @include ellipsis-param;
-    font-weight: bold;
-    width: 100%;
-    transition: width 0.2s ease-in-out;
-    @include little-mobile {
-      font-size: 0.875rem;
-    }
-  }
-
-  /*description plat*/
-  & .meal__entitled {
-    font-size: 15px;
-    line-height: 1.5rem;
-    @include ellipsis-param;
-    width: 100%;
-    transition: width 0.2s ease-in-out;
-    @include little-mobile {
-      font-size: 0.8125rem;
-    }
-  }
-
-    /*prix*/
     & .meal__price {
       display: flex;
       align-items: flex-end;
@@ -282,41 +188,80 @@ img {
         font-size: 0.875rem;
       }
     }
+    & .check-btn {
+      @include check-btn;
+      margin-right: 1px;
+      top: 0; 
+      right: -1px;
+      transform: translateX(73px);
+      transition: transform 0.2s ease;
+    }
+    & .fas.fa-check-circle {
+    @include check-icon;
+    }
+    &:hover {
+      cursor: pointer;
+      & .meal__heading {
+        width: 217px;
+        @include little-mobile {
+          width: 150px;
+        }
+        @include big-tablette {
+          width: 300px;
+        }
+        @include desktop {
+          width: 200px;
+        }
+      }
+      & .meal__entitled {
+        width: 217px;
+        @include little-mobile {
+          width: 160px;
+        }
+        @include big-tablette {
+          width: 300px;
+        }
+        @include desktop {
+          width: 200px;
+        }
+      }
+      & .meal__price {
+      transform: translateX(-50px);
+      right: 5px;
+      }
+      & .check-btn {
+        transform: translateX(0);
+      }
+      & .fas.fa-check-circle {
+        animation: rotate 0.3s;
+      }
+    }
+
+/*-- ellipsis compostion plat --*/
+    & .ellipsis {
+      width: 85%;
+      @include little-mobile {
+        width: 80%;
+      }
+    }
   }
 
-    /*animation apparition ul menus*/
+/*-- animation apparition ul menus --*/
   & .meal--one {
-    animation: fade1 1s 0.2s backwards;
+    animation: fade1 1s;
   }
 
   & .meal--two {
-    animation: fade2 1.2s 0.2s backwards;
+    animation: fade2 1.2s;
   }
 
   & .meal--three {
-    animation: fade3 1.4s 0.2s backwards;
+    animation: fade3 1.4s;
   }
   & .meal--four {
-    animation: fade4 1.6s 0.2s backwards;
+    animation: fade4 1.6s;
   }
   
-  /*bouton vert -> slide au hover*/
-  & .check-btn {
-    @include check-btn;
-    margin-right: 1px;
-    top: 0; 
-    right: -1px;
-    transform: translateX(73px);
-    transition: transform 0.2s ease;
-  }
-
-  /*animation logo coche -> rotation*/
-  & .fas.fa-check-circle {
-    @include check-icon;
-    transform: rotate(0);
-    transition: 0.1s cubic-bezier(.31,1.22,.43,.69);
-  }
-
   /*bouton commander*/
   .order-container {
     padding: 50px;
