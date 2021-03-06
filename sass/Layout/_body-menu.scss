@@ -201,22 +201,11 @@ img {
     }
     &:hover {
       cursor: pointer;
-      & .meal__heading {
-        width: 217px;
-        @include little-mobile {
-          width: 150px;
-        }
-        @include big-tablette {
-          width: 300px;
-        }
-        @include desktop {
-          width: 200px;
-        }
-      }
+      & .meal__heading,
       & .meal__entitled {
         width: 217px;
         @include little-mobile {
-          width: 160px;
+          width: 150px;
         }
         @include big-tablette {
           width: 300px;
