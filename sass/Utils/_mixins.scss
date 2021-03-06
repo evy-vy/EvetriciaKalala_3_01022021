@@ -44,12 +44,12 @@
   border-radius: 30px;
   box-shadow: 0px 8px 10px #cdcdcd;
   opacity: 1;
-  transform: opacity, box-shadow;
+  transform: box-shadow;
   transition: all 0.3s ease-in;
   &:hover {
     cursor: pointer;
     opacity: 0.8;
-    box-shadow: 0 9px 10px darken(#cdcdcd, 10%);
+    box-shadow: 0 9px 10px darken(#cdcdcd, 20%);
   }
 }
 
