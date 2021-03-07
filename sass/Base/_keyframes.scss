@@ -67,42 +67,6 @@
   }
 }
 
-@keyframes fade2 {
-  0% {
-    opacity: 0; 
-  }
-  85% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1; 
-  }
-}
-
-@keyframes fade3 {
-0% {
-    opacity: 0; 
-  }
-  95% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1; 
-  }
-}
-
-@keyframes fade4 {
-  0% {
-      opacity: 0; 
-    }
-    98% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1; 
-    }
-  }
-
 /*rotation coche*/
 @keyframes rotate{
   from {
